@@ -1,0 +1,15 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#0F1712"/>
+  <rect width="1600" height="900" fill="url(#paint0_linear)"/>
+  <circle cx="800" cy="450" r="110" fill="rgba(200,168,110,0.13)" stroke="#C8A86E" stroke-width="2"/>
+  <path d="M760 392L876 450L760 508V392Z" fill="#F6F1E6"/>
+  <path d="M159 751C324 614.333 486 546 645 546C812.333 546 955.333 603 1074 717C1143.33 783.667 1318.67 841.333 1600 890H0V840C61.3333 818.667 114.333 789 159 751Z" fill="#101712"/>
+  <text x="800" y="170" fill="#F6F1E6" font-family="serif" font-size="58" letter-spacing="10" text-anchor="middle">SIZZLE REEL PLACEHOLDER</text>
+  <text x="800" y="220" fill="#C8A86E" font-family="sans-serif" font-size="18" letter-spacing="7" text-anchor="middle">REPLACE WITH OFFICIAL VIDEO EMBED</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#233428"/>
+      <stop offset="1" stop-color="#0F1712"/>
+    </linearGradient>
+  </defs>
+</svg>
