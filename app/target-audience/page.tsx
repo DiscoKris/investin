@@ -57,7 +57,7 @@ export default function TargetAudiencePage() {
                 <h2 className="text-[1.45rem] font-semibold leading-[1.08] text-[var(--color-gold)] sm:text-[1.7rem] lg:text-[2.25rem]">
                   Intergenerational Audience
                 </h2>
-                <ul className="mt-8 space-y-4 text-[1.08rem] leading-[1.45] text-[var(--color-ivory)] sm:text-[1.2rem] lg:space-y-5 lg:text-[1.35rem]">
+                <ul className="mt-8 list-none space-y-4 pl-0 text-[1.08rem] leading-[1.45] text-[var(--color-ivory)] sm:text-[1.2rem] lg:space-y-5 lg:text-[1.35rem]">
                   {audienceGroups.map((group) => (
                     <li key={group} className="flex items-start gap-3">
                       <span className="mt-[0.2em] text-[var(--color-ivory)]">

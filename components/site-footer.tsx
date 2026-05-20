@@ -3,6 +3,7 @@ import Link from "next/link";
 const footerNavItems = [
   { href: "/", label: "Home" },
   { href: "/calculator", label: "Calculator" },
+  { href: "/creative-team", label: "Team" },
   { href: "/tour", label: "Tour" },
   { href: "/music-lyrics-book", label: "Soundtrack" },
   { href: "/thank-you", label: "Contact" },

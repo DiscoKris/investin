@@ -66,19 +66,16 @@ export default function ExampleInvestmentPage() {
                     of the £600,000 or £360,000.
                   </p>
                   <p>
-                    Her portion is the percentage of investment (
-                    <span className="font-semibold text-[var(--color-ivory)]">
-                      £100,000
-                    </span>
-                    ) against the capitalization{" "}
-                    <span className="font-semibold text-[var(--color-ivory)]">
-                      £1m
-                    </span>
-                    ... is{" "}
+                    Her investment represents{" "}
                     <span className="font-semibold text-[var(--color-ivory)]">
                       10%
                     </span>{" "}
-                    so 10% of £360,000. Pamela receives an additional check of{" "}
+                    of the{" "}
+                    <span className="font-semibold text-[var(--color-ivory)]">
+                      £1m
+                    </span>{" "}
+                    capitalisation, so she receives 10% of the investors&apos;
+                    profit share, or{" "}
                     <span className="font-semibold text-[var(--color-ivory)]">
                       £36,000
                     </span>

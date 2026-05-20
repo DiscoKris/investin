@@ -42,8 +42,7 @@ export default function TitlesAndTermsPage() {
                     <span className="font-semibold uppercase text-[var(--color-gold)]">
                       Co-Producer:
                     </span>{" "}
-                    (2nd line order of investment size, and date) customarily
-                    offered for investments of £250,000 (60% Terms)
+                    second-line billing, ordered by investment size and date.
                   </p>
                   <p>
                     <span className="font-semibold uppercase text-[var(--color-gold)]">
@@ -70,7 +69,7 @@ export default function TitlesAndTermsPage() {
                   <p className="font-semibold text-[var(--color-ivory)]">
                     Investors are entitled pro-rata to:
                   </p>
-                  <ul className="space-y-2">
+                  <ul className="list-none space-y-2 pl-0">
                     {investorEntitlements.map((item) => (
                       <li key={item} className="flex gap-2">
                         <span className="pt-[0.18rem] text-[var(--color-ivory)]">

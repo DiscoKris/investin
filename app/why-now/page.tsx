@@ -14,7 +14,25 @@ const marketExamples = [
   },
   {
     title: "Billy Elliot",
-    description: "A working class story about education and opportunity.",
+    description: "A working-class story about education and opportunity.",
+  },
+];
+
+const comparableLogos = [
+  {
+    title: "Come From Away",
+    src: "/assets/come.jpg",
+    alt: "Come From Away show logo",
+  },
+  {
+    title: "Kinky Boots",
+    src: "/assets/kinky.jpg",
+    alt: "Kinky Boots show logo",
+  },
+  {
+    title: "Billy Elliot",
+    src: "/assets/billy.jpg",
+    alt: "Billy Elliot show logo",
   },
 ];
 
@@ -103,28 +121,34 @@ export default function WhyNowPage() {
             delay={0.08}
             className="relative flex min-h-[24rem] items-stretch justify-center lg:min-h-0 lg:justify-end"
           >
-            <div className="relative w-full max-w-[34rem] overflow-hidden rounded-[2rem] border border-[rgba(232,222,203,0.08)] bg-[rgba(8,12,10,0.36)] shadow-[0_24px_60px_rgba(0,0,0,0.22)] lg:max-w-none lg:rounded-[2.4rem]">
-              <div
-                className="absolute inset-0 bg-[rgba(8,10,12,0.18)]"
-                style={{
-                  clipPath: "polygon(10% 0, 100% 0, 100% 100%, 0 100%)",
-                }}
-              />
-              <div
-                className="absolute inset-0 hidden bg-[rgba(255,255,255,0.03)] lg:block"
-                style={{
-                  clipPath: "polygon(0 0, 18% 0, 6% 100%, 0 100%)",
-                }}
-              />
-              <Image
-                src="/assets/wayne2.jpg"
-                alt="Stage performance image from To Sir, With Love The Musical"
-                fill
-                priority
-                className="object-cover object-center"
-                sizes="(min-width: 1024px) 40vw, 100vw"
-              />
-              <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(8,12,10,0.08),rgba(8,12,10,0.24)),radial-gradient(circle_at_18%_24%,rgba(112,88,48,0.18),transparent_28%),radial-gradient(circle_at_80%_86%,rgba(0,0,0,0.22),transparent_32%)]" />
+            <div className="relative w-full max-w-[34rem] overflow-hidden rounded-[2rem] border border-[rgba(232,222,203,0.08)] bg-[linear-gradient(180deg,rgba(13,18,16,0.94),rgba(7,10,9,0.82))] p-4 shadow-[0_24px_60px_rgba(0,0,0,0.22)] lg:max-w-none lg:rounded-[2.4rem] lg:p-5">
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_14%,rgba(255,233,188,0.08),transparent_24%),radial-gradient(circle_at_82%_84%,rgba(255,255,255,0.05),transparent_18%),linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0))]" />
+              <div className="relative grid h-full gap-4 sm:grid-cols-2 lg:grid-cols-1">
+                {comparableLogos.map((logo, index) => (
+                  <div
+                    key={logo.title}
+                    className={[
+                      "group relative overflow-hidden rounded-2xl border border-[rgba(232,222,203,0.12)] bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))] shadow-[0_18px_40px_rgba(0,0,0,0.18)] backdrop-blur-sm transition-all duration-300 hover:border-[rgba(214,180,103,0.3)] hover:shadow-[0_24px_46px_rgba(0,0,0,0.24),0_0_24px_rgba(214,180,103,0.12)]",
+                      index === comparableLogos.length - 1
+                        ? "sm:col-span-2 sm:mx-auto sm:w-[calc(50%-0.5rem)] lg:col-span-1 lg:mx-0 lg:w-full"
+                        : "",
+                    ].join(" ")}
+                  >
+                    <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),transparent_38%,rgba(214,180,103,0.04)_100%)]" />
+                    <div className="pointer-events-none absolute inset-x-8 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.34),transparent)]" />
+                    <div className="relative aspect-[16/10] px-6 py-5 sm:px-7 lg:px-8">
+                      <Image
+                        src={logo.src}
+                        alt={logo.alt}
+                        fill
+                        priority
+                        className="object-contain p-6 transition-transform duration-300 group-hover:scale-[1.02]"
+                        sizes="(min-width: 1024px) 34vw, (min-width: 640px) 42vw, 100vw"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </Reveal>
         </div>

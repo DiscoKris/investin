@@ -16,7 +16,7 @@ const recoupmentRows = [
     emphasis: false,
   },
   {
-    label: "VAT (20%) And Credit Card",
+    label: "VAT and credit card fees",
     values: ["£ 104,000", "£ 93,600", "£ 83,200", "£67,600"],
     emphasis: false,
   },
@@ -41,7 +41,7 @@ const recoupmentRows = [
     emphasis: true,
   },
   {
-    label: "Weekly Operating Costs.",
+    label: "Weekly Operating Costs",
     values: ["£ 130,000", "£ 130,000", "£ 130,000", "£130,000"],
     emphasis: false,
   },
@@ -113,7 +113,7 @@ export default function RecoupmentChartPage() {
                   Recoupment <span className="text-[var(--color-gold)]">Chart</span>
                 </h1>
                 <p className="mt-3 text-[0.98rem] font-semibold uppercase tracking-[0.08em] text-[var(--color-gold)] sm:text-[1.05rem] lg:text-[1.1rem]">
-                  Assumptions : £50 a ticket, 8 shows a week, 1200 Seat
+                  Assumptions: £50 a ticket, 8 shows a week, 1200 Seat
                   Capacity
                 </p>
               </div>

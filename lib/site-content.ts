@@ -59,7 +59,7 @@ export const whyNowPoints = [
 export const marketExamples = [
   "Come From Away - A true story about ordinary people in an extraordinary time.",
   "Kinky Boots - A story of acceptance and transformation.",
-  "Billy Elliot - A working class story about education and opportunity.",
+  "Billy Elliot - A working-class story about education and opportunity.",
 ];
 
 export const audienceCards = [
@@ -108,7 +108,7 @@ export const teamMembers = [
     note: "Named in the investor deck as part of the core music team supporting the production's theatrical execution.",
   },
   {
-    name: "Keiran Donavan",
+    name: "Kieran Donovan",
     role: "Choreographer",
     note: "Named in the investor deck as part of the production's movement and staging team.",
   },
@@ -156,15 +156,15 @@ export const producerProfiles = [
   },
   {
     name: "Magic Pictures International",
-    body: "A Los Angeles based production company specializing in Theatre and Television. Recent theatre credits include Grease, Rodgers and Hammerstein's Cinderella, Mary Poppins, Wizard of Oz, Beauty and the Beast and Aladdin.",
+    body: "A Los Angeles-based production company specialising in theatre and television. Recent theatre credits include Grease, Rodgers and Hammerstein's Cinderella, Mary Poppins, Wizard of Oz, Beauty and the Beast and Aladdin.",
   },
 ];
 
 export const investmentSteps = [
   {
     step: "1",
-    title: "Production capitalization",
-    body: "UK Tour 2027 production capitalization is £1m with weekly operating costs of £130,000.",
+    title: "Production capitalisation",
+    body: "UK Tour 2027 production capitalisation is £1m with weekly operating costs of £130,000.",
   },
   {
     step: "2",

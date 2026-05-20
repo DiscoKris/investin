@@ -34,7 +34,7 @@ export default function TourPage() {
                   Anniversary Tour
                 </p>
                 <p className="mt-4 text-center text-[0.85rem] font-semibold uppercase tracking-[0.18em] text-[var(--color-gold)] sm:text-[0.95rem] lg:text-[1rem]">
-                  Hollywood Made A Movie Now It&apos;s Time For Broadway
+                  Hollywood made the movie. Now it&apos;s time for Broadway.
                 </p>
               </div>
 
@@ -52,8 +52,8 @@ export default function TourPage() {
 
               <div className="mt-auto pt-8">
                 <p className="mx-auto max-w-[30rem] text-center text-[0.92rem] font-medium uppercase leading-[1.55] tracking-[0.08em] text-[var(--color-cream)] sm:text-[0.98rem]">
-                  Watch Footage From The London Concert For A Sneak Peak At The
-                  Production
+                  Watch footage from the London concert for a sneak peek at the
+                  production.
                 </p>
                 <ConcertFootageModal />
                 <ContinueButton href="/producers" className="lg:mt-8" />

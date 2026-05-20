@@ -114,7 +114,7 @@ export default function MusicLyricsBookPage() {
           <div className="relative z-10 mt-10 flex flex-col items-center text-center lg:mt-8">
             <Reveal className="flex flex-col items-center text-center">
               <p className="text-[1rem] font-semibold uppercase tracking-[0.08em] text-[var(--color-ivory)] sm:text-[1.08rem]">
-                CLICK BELOW TO HEAR SOUNDTRACK SAMPLE
+                Click below to hear soundtrack samples
               </p>
               <div className="mt-5">
                 <SoundtrackModal />
@@ -149,7 +149,7 @@ export default function MusicLyricsBookPage() {
                 className="h-auto w-[7rem] sm:w-[8rem] lg:absolute lg:left-0 lg:top-0 lg:w-[8.5rem]"
               />
               <h2 className="text-[2rem] font-bold uppercase leading-none tracking-[-0.04em] text-[var(--color-gold)] sm:text-[2.5rem] lg:text-[3.4rem]">
-                Why These Song Writers
+                Why These Songwriters
               </h2>
             </div>
           </Reveal>

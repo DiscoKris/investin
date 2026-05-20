@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { PresentationProgress } from "@/components/presentation-progress";
 
 export function SiteNav() {
   return (
@@ -15,9 +16,9 @@ export function SiteNav() {
               className="h-9 w-auto sm:h-10"
               priority
             />
-            <p className="hidden text-[0.66rem] font-medium tracking-[0.16em] text-[var(--color-mist)] uppercase md:block">
-              Investor Presentation
-            </p>
+            <div className="min-w-0">
+              <PresentationProgress />
+            </div>
           </Link>
         </div>
       </div>

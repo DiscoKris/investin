@@ -27,12 +27,12 @@ export default function LegacyPage() {
           <div className="relative z-10 mt-8 grid gap-8 lg:mt-9 lg:grid-cols-[1.02fr_0.98fr] lg:items-start">
             <Reveal className="flex flex-col">
               <p className="text-[1.15rem] font-semibold uppercase tracking-[0.03em] text-[var(--color-gold)] sm:text-[1.28rem]">
-                Hollywood Made A Movie.....
+                Hollywood made the movie. Now it&apos;s time for the stage.
               </p>
               <div className="mt-7 max-w-[44rem] space-y-8 text-[1.08rem] leading-[1.78] text-[var(--color-ivory)] sm:text-[1.16rem] lg:text-[1.34rem] lg:leading-[1.84]">
                 <p>
                   Released in 1967 and directed by James Clavell, To Sir, With
-                  Love was adapted from E. R. Braithwaite&apos;s 1959 novel.
+                  Love was adapted from E. R. Braithwaite&apos;s 1959 memoir.
                 </p>
                 <p>
                   The film starred Sidney Poitier, who had already made history
@@ -86,7 +86,7 @@ export default function LegacyPage() {
               <div className="mt-5 space-y-2 text-[1.5rem] font-semibold leading-[1.28] text-[var(--color-ivory)] sm:text-[1.8rem]">
                 <p>Grossed $42m on $1m Budget</p>
                 <p>#1 Song in US and UK</p>
-                <p>Still used in Education Today</p>
+                <p>Still used in education today</p>
               </div>
             </div>
 

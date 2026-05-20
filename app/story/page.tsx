@@ -19,7 +19,7 @@ export default function StoryPage() {
             A TRUE STORY
           </h1>
           <p className="body-copy mt-8 max-w-3xl text-[var(--color-cream)]">
-            To Sir, With Love, is an autobiographical story that is every bit as
+            To Sir, With Love is an autobiographical story that is every bit as
             relevant now as it was then. Rick Braithwaite is more than just a
             Cambridge-educated engineer and a former RAF fighter pilot; he is a
             man battling societal prejudices at every turn. Refusing to bow to

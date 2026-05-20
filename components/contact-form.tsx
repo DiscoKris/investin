@@ -97,7 +97,7 @@ export function ContactForm() {
         disabled={isSubmitting}
         className="mt-6 inline-flex rounded-full bg-[var(--color-gold)] px-6 py-3 text-xs font-semibold tracking-[0.28em] uppercase text-[var(--color-ink)] disabled:cursor-not-allowed disabled:opacity-80"
       >
-        Send Inquiry
+        Send Enquiry
       </button>
       <p
         aria-live="polite"

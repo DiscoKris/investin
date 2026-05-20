@@ -6,7 +6,7 @@ const qubeCopy =
   "QUBE Theatrical is an executive producer and general management company at the forefront of live entertainment, specialising in concerts, musicals in concert, and theatre productions across the West End, national and international tours, and one-night-only events. Founded by Sam Quested and Darren Bell, QUBE combines over two decades of experience delivering award-winning musicals, world-class concerts and landmark staged events.";
 
 const mpiCopy =
-  "Magic Pictures International is a Los Angeles based production company specializing in Theatre and Television. Recent Theatre credits include producing Grease, Rodgers and Hammerstein's Cinderella, Mary Poppins, Wizard of Oz, Beauty and the Beast and Aladdin. Productions have played across major U.S. regional theatres and international touring markets including Pasadena Playhouse, Tennessee Performing Arts Center and Kirk Douglas Theatre. MPI has produced over 50 musical theatre productions.";
+  "Magic Pictures International is a Los Angeles-based production company specialising in theatre and television. Recent theatre credits include producing Grease, Rodgers and Hammerstein's Cinderella, Mary Poppins, Wizard of Oz, Beauty and the Beast and Aladdin. Productions have played across major U.S. regional theatres and international touring markets including Pasadena Playhouse, Tennessee Performing Arts Center and Kirk Douglas Theatre. MPI has produced over 50 musical theatre productions.";
 
 export default function ProducersPage() {
   return (
@@ -28,8 +28,8 @@ export default function ProducersPage() {
                 <span className="text-[var(--color-ivory)]">Who Are </span>
                 <span className="text-[var(--color-gold)]">You </span>
                 <span className="text-[var(--color-ivory)]">Trusting </span>
-                <span className="text-[var(--color-gold)]">Your Investment </span>
-                <span className="text-[var(--color-ivory)]">With?</span>
+                <span className="text-[var(--color-gold)]">With </span>
+                <span className="text-[var(--color-ivory)]">Your Investment?</span>
               </h1>
             </div>
           </Reveal>

@@ -86,14 +86,14 @@ export default function OpportunityPage() {
                     Key Points
                   </p>
                   <p>
-                    Investor funds are held and applied through Lead Producers
-                    producing entity,{" "}
+                    Investor funds are held and applied through the Lead
+                    Producers&apos; producing entity,{" "}
                     <span className="font-semibold text-[var(--color-gold)]">
                       Greenslade Productions Ltd.
                     </span>{" "}
                     Standard production terms for recoupment, repayment, and
                     ongoing profit participation apply, as detailed in the
-                    financial terms below A full participation agreement will
+                    financial terms below. A full participation agreement will
                     outline distribution procedures, reporting schedules, and
                     investor communications.
                   </p>

@@ -2,13 +2,13 @@ import { ContinueButton } from "@/components/continue-button";
 
 const numberedPoints = [
   "Theatrical production is an inherently risky business. Contributions to the Production will involve a higher level of risk than most other financial transactions and there is no probability, but only a possibility, that investors will get back the amount which they invest.",
-  "Most production costs are incurred prior to opening and will be paid from contributed funds. If the Production does not open or fail to proceed, the Producer shall return to contributors, on a pro rata and pari passu basis, any remaining net assets of the Production, if any, as determined by the Production’s certified accountant. Each contributor’s share of such return shall be calculated as the proportion of their individual contribution relative to the total capitalisation. Contributors shall have no claim against any other assets of the Producer beyond the Production’s net assets.",
+  "Most production costs are incurred prior to opening and will be paid from contributed funds. If the Production does not open or fails to proceed, the Producer shall return to contributors, on a pro rata and pari passu basis, any remaining net assets of the Production, if any, as determined by the Production’s certified accountant. Each contributor’s share of such return shall be calculated as the proportion of their individual contribution relative to the total capitalisation. Contributors shall have no claim against any other assets of the Producer beyond the Production’s net assets.",
   "A contribution to the Production is not transferable without the Producer’s prior written consent. As there is no established market for such contributions, it may be difficult for contributors to assess their value or fully understand the risks involved. Once an investment is committed and cleared funds are received, it is final and cannot be withdrawn, redeemed, or cancelled at the Investor’s discretion. Funds remain at risk for the life of the project, and repayment occurs only under the agreed recoupment terms, except where proven negligence, willful misconduct, or fraud applies.",
   "This document is for private distribution only and the only person who may enter or offer to enter into any agreement for or with a view to contributing on the basis contained in this document is the person to whom it is addressed and to whom it has been sent by the Producer.",
   "Limited Recourse - Investors have no rights against the Producer's assets other than those connected to the Production itself. Investments are not protected by any compensation scheme.",
   "Fluctuating Income - Income from an investment in the Production will vary depending on box office performance.",
   "The opportunity described in this document may not be suitable for all recipients. Prospective investors are strongly advised to seek independent advice from a financial adviser authorised under the Financial Services and Markets Act 2000 (FSMA) and experienced in theatre and entertainment investments. Where appropriate, specialist tax advice should also be obtained.",
-  "If for any reason the production fails to open, is cancelled or if having opened fails sufficiently to attract, investors may not receive back their contributions and the Producers shall only return to investors pro rata and pari passu with their respective contributions a proportion of such net assets of the production as are determined to be available.",
+  "If for any reason the production fails to open, is cancelled, or, if having opened, fails to attract sufficient audiences, investors may not receive back their contributions and the Producers shall only return to investors pro rata and pari passu with their respective contributions a proportion of such net assets of the production as are determined to be available.",
   "The Producers will not obtain insurance for the production that includes cover in respect of the impact on the production of Covid-19, any variant or any similar virus and as such if, e.g., performances are lost as a result of cast illness or a local or national lockdown or if restrictions are imposed to address Covid-19, any variant or any similar virus, which impact on rehearsing and/or presenting the production, the production will suffer uninsured losses.",
 ];
 
@@ -164,14 +164,14 @@ export default function DisclaimersPage() {
                   investment.
                 </p>
                 <p>
-                  FOR EXAMPLE IF $50,000 IS INVESTED. THE EXCHANGE RATE TO
-                  WHICH THE FUNDS ARE RECEIVED IS 1.35. THIS IS MUTUALLY
-                  AGREED.
+                  For example, if $50,000 is invested, the exchange rate at
+                  which the funds are received is 1.35. This is mutually
+                  agreed.
                 </p>
                 <p>
-                  WHEN CALCULATING THE PAYOUT THE SAME EXCHANGE RATE IS USED,
-                  1.35 REGARDLESS OF CURRENT RATES. THIS MEANS THERE IS NO RISK
-                  TO THE INVESTOR.
+                  When calculating the payout, the same exchange rate is used,
+                  1.35, regardless of current rates. This is intended to
+                  reduce foreign exchange uncertainty for the investor.
                 </p>
               </div>
             </div>

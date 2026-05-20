@@ -28,10 +28,10 @@ const featuredTeam = [
     imageAlt: "Portrait of Sean Greene",
   },
   {
-    name: "Keiran Donovan",
+    name: "Kieran Donovan",
     role: "Choreographer",
     imageSrc: "/assets/kieran.jpg",
-    imageAlt: "Portrait of Keiran Donovan",
+    imageAlt: "Portrait of Kieran Donovan",
   },
   {
     name: "Shereen Phillips",
@@ -126,7 +126,7 @@ export default function CreativeTeamPage() {
               href="#visionaries"
               className="inline-flex items-center justify-center rounded-full border border-[rgba(200,168,110,0.44)] bg-[linear-gradient(180deg,rgba(244,236,222,0.9),rgba(223,209,183,0.88))] px-8 py-4 text-center text-[0.86rem] font-semibold uppercase tracking-[0.2em] text-[#253124] shadow-[0_12px_30px_rgba(0,0,0,0.18)] transition duration-200 hover:-translate-y-0.5 hover:border-[rgba(200,168,110,0.72)] hover:bg-[linear-gradient(180deg,rgba(247,241,230,0.96),rgba(230,217,192,0.92))] sm:px-10 sm:py-5 sm:text-[0.92rem]"
             >
-              Meet The Visionaries
+              Meet the Visionaries
             </a>
           </Reveal>
         </div>

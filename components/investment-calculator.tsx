@@ -71,7 +71,7 @@ export function InvestmentCalculator() {
       <section className="card-panel rounded-[2.2rem] border border-[rgba(232,222,203,0.12)] px-5 py-8 sm:px-8 sm:py-10 lg:px-12">
         <div className="mx-auto max-w-3xl text-center">
           <p className="headline text-[2.4rem] text-[var(--color-ivory)] sm:text-[3rem] lg:text-[3.6rem]">
-            Explore your investment potential....
+            Explore your investment potential…
           </p>
         </div>
 
