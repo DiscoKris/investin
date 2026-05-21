@@ -214,6 +214,17 @@ export default function RecoupmentChartPage() {
               </div>
             </div>
 
+            <div className="mt-5 rounded-[1.4rem] border border-[rgba(214,180,103,0.22)] bg-[linear-gradient(180deg,rgba(255,244,214,0.05),rgba(8,13,10,0.14))] px-5 py-4 shadow-[0_14px_34px_rgba(0,0,0,0.18)] sm:px-6">
+              <p className="text-center text-[0.94rem] leading-[1.65] text-[var(--color-cream)] sm:text-[0.98rem]">
+                Investors can elect to roll over both{" "}
+                <span className="font-medium text-[var(--color-ivory)]">
+                  investment and profits
+                </span>{" "}
+                into future West End and Broadway productions, subject to
+                applicable offering terms and availability.
+              </p>
+            </div>
+
             <ContinueButton href="/example-investment" className="lg:mt-8" />
           </div>
         </Reveal>

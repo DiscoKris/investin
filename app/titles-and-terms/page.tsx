@@ -29,6 +29,14 @@ export default function TitlesAndTermsPage() {
                 <h1 className="text-center text-[2.25rem] font-bold uppercase leading-[0.96] tracking-[-0.04em] text-[var(--color-ivory)] sm:text-[2.85rem] lg:text-[4rem]">
                   Titles & <span className="text-[var(--color-gold)]">Terms</span>
                 </h1>
+
+                <p className="mx-auto max-w-3xl text-center text-[0.92rem] leading-[1.65] text-[rgba(232,222,203,0.88)] sm:text-[0.98rem]">
+                  Foundational investors in the UK Tour production of{" "}
+                  <span className="text-[var(--color-gold)]">
+                    To Sir, With Love
+                  </span>{" "}
+                  can participate proportionally in future commercial transfer entities and/or designated subsidiary rights participation pools, including but not limited to West End and Broadway productions, subject to offering terms, production structure, and applicable securities regulations.
+                </p>
               </div>
 
               <div className="mt-7 space-y-5 text-[0.98rem] leading-[1.55] text-[var(--color-cream)] sm:text-[1.04rem] lg:mt-8">
