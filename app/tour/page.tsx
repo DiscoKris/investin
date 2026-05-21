@@ -14,9 +14,9 @@ const tourWeeks = [
   { week: "Week 10:", details: "Northampton, 7 June 2027" },
   { week: "Week 11:", details: "Malvern, 14 June 2027" },
   { week: "Week 12:", details: "Wolverhampton, 21 June 2027" },
-  { week: "Week 13:", details: "Cambridge, 28 June 2027" },
-  { week: "Week 14:", details: "Bournemouth, 5 July 2027" },
-  { week: "Week 15-16:", details: "London, 12 July 2027" },
+  { week: "Week 13:", details: "Chelmsford, 28 June 2027" },
+  { week: "Week 14:", details: "Portsmouth, 12 July 2027" },
+  { week: "Week 15-16:", details: "London, 19 July 2027" },
 ];
 
 export default function TourPage() {
