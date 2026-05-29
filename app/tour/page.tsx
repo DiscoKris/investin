@@ -4,19 +4,19 @@ import { Reveal } from "@/components/reveal";
 import { ConcertFootageModal } from "@/app/tour/concert-footage-modal";
 
 const tourWeeks = [
-  { week: "Week 1-3:", details: "Leeds, April 13 2027" },
-  { week: "Week 4:", details: "Cheltenham, 26 April 2027" },
-  { week: "Week 5:", details: "Hull, 3 May 2027" },
-  { week: "Week 6:", details: "Liverpool, 10 May 2027" },
-  { week: "Week 7:", details: "Windsor, 17 May 2027" },
-  { week: "Week 8:", details: "Blackpool, 24 May 2027" },
-  { week: "Week 9:", details: "Chesterfield, 31 May 2027" },
-  { week: "Week 10:", details: "Northampton, 7 June 2027" },
-  { week: "Week 11:", details: "Malvern, 14 June 2027" },
-  { week: "Week 12:", details: "Wolverhampton, 21 June 2027" },
-  { week: "Week 13:", details: "Chelmsford, 28 June 2027" },
-  { week: "Week 14:", details: "Portsmouth, 12 July 2027" },
-  { week: "Week 15-16:", details: "London, 19 July 2027" },
+  { week: "Week 1-3:", details: "Leeds, April 15 2027" },
+  { week: "Week 4:", details: "Hull, 3 May 2027" },
+  { week: "Week 5:", details: "Blackpool, 10 May 2027" },
+  { week: "Week 6:", details: "Windsor, 17 May 2027" },
+  { week: "Week 7:", details: "Cheltenham, 24 May 2027" },
+  { week: "Week 8:", details: "Chesterfield, 31 May 2027" },
+  { week: "Week 9:", details: "Northampton, 7 June 2027" },
+  { week: "Week 10:", details: "Malvern, 14 June 2027" },
+  { week: "Week 11:", details: "Wolverhampton, 21 June 2027" },
+  { week: "Week 12:", details: "Chelmsford, 28 June 2027" },
+  { week: "Week 13:", details: "Portsmouth, 12 July 2027" },
+  { week: "Week 14-15:", details: "Liverpool, 19 July 2027" },
+  { week: "Week 15-16:", details: "London, 26 July 2027" },
 ];
 
 export default function TourPage() {

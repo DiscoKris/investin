@@ -37,12 +37,15 @@ export default function InvestmentPage() {
               <Reveal delay={0.05}>
                 <div className="mt-7 max-w-[42rem] space-y-5 text-center lg:mt-8 lg:text-left">
                   <p className="text-[1rem] font-semibold leading-[1.72] text-[var(--color-ivory)] sm:text-[1.08rem]">
-                    UK Tour 2027 production capitalisation is{" "}
-                    <span className="text-[var(--color-gold)]">£1m</span> with
-                    Weekly Operating Costs{" "}
-                    <span className="text-[var(--color-gold)]">£130,000</span>
-                    <br />
-                    <span className="text-[0.94rem] font-semibold leading-[1.7] text-[var(--color-cream)] sm:text-[0.98rem]">
+                    <span className="block">
+                      UK Tour 2027 production capitalisation is{" "}
+                      <span className="text-[var(--color-gold)]">£1m</span>
+                    </span>
+                    <span className="mt-4 block">
+                      Weekly Operating Costs{" "}
+                      <span className="text-[var(--color-gold)]">£130,000</span>
+                    </span>
+                    <span className="block text-[0.94rem] font-semibold leading-[1.7] text-[var(--color-cream)] sm:text-[0.98rem]">
                       (Weekly Operating Costs Include Salaries, Production
                       Staff, Marketing, Theatre Costs &amp; Admin)
                     </span>

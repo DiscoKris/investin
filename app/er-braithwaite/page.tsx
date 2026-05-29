@@ -59,8 +59,8 @@ export default function ErBraithwaitePage() {
                     <span className="font-semibold text-[var(--color-gold)]">
                       To Sir, With Love
                     </span>
-                    , the small book Braithwaite would later call &ldquo;that
-                    little story,&rdquo; written simply to capture the
+                    , which Braithwaite would later call &ldquo;that
+                    little book,&rdquo; written simply to capture the
                     challenges and unexpected humanity he discovered in a London
                     classroom.
                   </p>
