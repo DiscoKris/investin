@@ -75,7 +75,7 @@ export default function MusicLyricsBookPage() {
             </div>
           </Reveal>
 
-          <div className="relative z-10 mt-8 grid gap-x-6 gap-y-7 sm:grid-cols-2 lg:mt-10 lg:grid-cols-6 lg:gap-x-4 lg:gap-y-7 xl:px-8">
+          <div className="relative z-10 mt-8 grid gap-x-6 gap-y-9 sm:grid-cols-2 lg:mt-10 lg:grid-cols-6 lg:gap-x-5 lg:gap-y-10 xl:px-8">
             {creators.map((creator, index) => (
               <Reveal
                 key={creator.name}
@@ -83,13 +83,13 @@ export default function MusicLyricsBookPage() {
                 className={`flex flex-col items-center text-center ${creator.placement}`}
               >
                 <div className="group">
-                  <div className="relative h-40 w-40 overflow-hidden rounded-full border-2 border-[rgba(214,180,103,0.92)] bg-[rgba(8,13,10,0.24)] shadow-[0_16px_36px_rgba(0,0,0,0.2)] transition duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_22px_44px_rgba(0,0,0,0.26)] sm:h-44 sm:w-44 lg:h-40 lg:w-40 xl:h-44 xl:w-44">
+                  <div className="relative h-52 w-52 overflow-hidden rounded-full border-2 border-[rgba(214,180,103,0.92)] bg-[rgba(8,13,10,0.24)] shadow-[0_16px_36px_rgba(0,0,0,0.2)] transition duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_22px_44px_rgba(0,0,0,0.26)] sm:h-56 sm:w-56 lg:h-52 lg:w-52 xl:h-56 xl:w-56">
                     <Image
                       src={creator.imageSrc}
                       alt={creator.imageAlt}
                       fill
                       className="object-cover object-center brightness-[1.04] contrast-[1.04] saturate-[1.06] opacity-95 transition duration-300 group-hover:scale-[1.03]"
-                      sizes="(min-width: 1280px) 11rem, (min-width: 1024px) 10rem, 11rem"
+                      sizes="(min-width: 1280px) 14rem, (min-width: 1024px) 13rem, 14rem"
                     />
                     <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_28%_24%,rgba(255,255,255,0.16),transparent_24%),linear-gradient(180deg,transparent,rgba(7,15,11,0.22))]" />
                     {creator.placeholder ? (
@@ -101,7 +101,7 @@ export default function MusicLyricsBookPage() {
                     ) : null}
                   </div>
                 </div>
-                <p className="mt-4 text-[1.05rem] font-semibold leading-[1.18] text-[var(--color-ivory)] sm:text-[1.12rem]">
+                <p className="mt-5 text-[1.05rem] font-semibold leading-[1.18] text-[var(--color-ivory)] sm:text-[1.12rem]">
                   {creator.name}
                 </p>
                 <p className="mt-1 max-w-[13rem] text-[0.92rem] leading-[1.25] text-[var(--color-cream)] sm:text-[0.96rem]">
@@ -111,7 +111,7 @@ export default function MusicLyricsBookPage() {
             ))}
           </div>
 
-          <div className="relative z-10 mt-10 flex flex-col items-center text-center lg:mt-8">
+          <div className="relative z-10 mt-8 flex flex-col items-center text-center lg:mt-6">
             <Reveal className="flex flex-col items-center text-center">
               <p className="text-[1rem] font-semibold uppercase tracking-[0.08em] text-[var(--color-ivory)] sm:text-[1.08rem]">
                 Click below to hear soundtrack samples
@@ -154,7 +154,24 @@ export default function MusicLyricsBookPage() {
             </div>
           </Reveal>
 
-          <div className="relative z-10 mt-8 grid gap-10 lg:mt-10 lg:grid-cols-2 lg:gap-12">
+          <Reveal className="relative z-10 mt-7 sm:mt-8">
+            <div className="mx-auto flex max-w-[46rem] flex-col items-center gap-3 rounded-[1.75rem] border border-[rgba(214,180,103,0.22)] bg-[linear-gradient(180deg,rgba(54,82,53,0.38),rgba(23,38,25,0.2))] px-6 py-5 text-center shadow-[0_16px_38px_rgba(0,0,0,0.12)] sm:px-8 sm:py-6">
+              <p className="text-[1rem] leading-[1.45] text-[var(--color-ivory)] sm:text-[1.08rem] lg:text-[1.14rem]">
+                <span className="mr-3 text-[var(--color-gold)]">•</span>
+                Sold nearly 500 million records combined
+              </p>
+              <p className="text-[1rem] leading-[1.45] text-[var(--color-ivory)] sm:text-[1.08rem] lg:text-[1.14rem]">
+                <span className="mr-3 text-[var(--color-gold)]">•</span>
+                Grammy winners and Oscar-nominated songwriters
+              </p>
+              <p className="text-[1rem] leading-[1.45] text-[var(--color-ivory)] sm:text-[1.08rem] lg:text-[1.14rem]">
+                <span className="mr-3 text-[var(--color-gold)]">•</span>
+                Writers of some of the most iconic hits in film and popular music
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="relative z-10 mt-9 grid gap-10 lg:mt-10 lg:grid-cols-2 lg:gap-12">
             <Reveal>
               <div className="max-w-[34rem]">
                 <h3 className="text-[1.7rem] font-bold leading-[1.02] tracking-[-0.03em] text-[var(--color-ivory)] sm:text-[1.95rem] lg:text-[2.35rem]">

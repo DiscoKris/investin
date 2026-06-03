@@ -78,7 +78,7 @@ export default function CreativeTeamPage() {
             </div>
           </Reveal>
 
-          <div className="relative z-10 mt-8 grid gap-x-6 gap-y-7 sm:grid-cols-2 lg:mt-10 lg:grid-cols-8 lg:gap-x-5 lg:gap-y-8 xl:px-8">
+          <div className="relative z-10 mt-8 grid gap-x-6 gap-y-9 sm:grid-cols-2 lg:mt-10 lg:grid-cols-8 lg:gap-x-5 lg:gap-y-10 xl:px-8">
             {featuredTeam.map((member, index) => (
               <Reveal
                 key={member.name}
@@ -96,7 +96,7 @@ export default function CreativeTeamPage() {
                 }`}
               >
                 <div className="group">
-                  <div className="relative h-40 w-40 overflow-hidden rounded-full border-2 border-[rgba(214,180,103,0.92)] bg-[rgba(8,13,10,0.24)] shadow-[0_16px_36px_rgba(0,0,0,0.2)] transition duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_22px_44px_rgba(0,0,0,0.26)] sm:h-44 sm:w-44 lg:h-40 lg:w-40 xl:h-44 xl:w-44">
+                  <div className="relative h-52 w-52 overflow-hidden rounded-full border-2 border-[rgba(214,180,103,0.92)] bg-[rgba(8,13,10,0.24)] shadow-[0_16px_36px_rgba(0,0,0,0.2)] transition duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_22px_44px_rgba(0,0,0,0.26)] sm:h-56 sm:w-56 lg:h-52 lg:w-52 xl:h-56 xl:w-56">
                     <Image
                       src={member.imageSrc}
                       alt={member.imageAlt}
@@ -106,12 +106,12 @@ export default function CreativeTeamPage() {
                           ? "grayscale"
                           : "opacity-95"
                       }`}
-                      sizes="(min-width: 1280px) 11rem, (min-width: 1024px) 10rem, 11rem"
+                      sizes="(min-width: 1280px) 14rem, (min-width: 1024px) 13rem, 14rem"
                     />
                     <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_28%_24%,rgba(255,255,255,0.16),transparent_24%),linear-gradient(180deg,transparent,rgba(7,15,11,0.22))]" />
                   </div>
                 </div>
-                <p className="mt-4 text-[1.05rem] font-semibold leading-[1.18] text-[var(--color-ivory)] sm:text-[1.12rem]">
+                <p className="mt-5 text-[1.05rem] font-semibold leading-[1.18] text-[var(--color-ivory)] sm:text-[1.12rem]">
                   {member.name}
                 </p>
                 <p className="mt-1 text-[0.92rem] leading-[1.25] text-[var(--color-cream)] sm:text-[0.96rem]">
