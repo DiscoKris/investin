@@ -6,7 +6,7 @@ const qubeCopy =
   "QUBE Theatrical is an executive producer and general management company at the forefront of live entertainment, specialising in concerts, musicals in concert, and theatre productions across the West End, national and international tours, and one-night-only events. Founded by Sam Quested and Darren Bell, QUBE combines over two decades of experience delivering award-winning musicals, world-class concerts and landmark staged events.";
 
 const mpiCopy =
-  "Magic Pictures International is a Los Angeles-based production company specialising in theatre and television. Recent theatre credits include producing Grease, Rodgers and Hammerstein's Cinderella, Mary Poppins, Wizard of Oz, Beauty and the Beast and Aladdin. Productions have played across major U.S. regional theatres and international touring markets including Pasadena Playhouse, Tennessee Performing Arts Center and Kirk Douglas Theatre. MPI has produced over 50 musical theatre productions.";
+  "Magic Pictures International is a Los Angeles-based producer and general manager of live entertainment, specialising in the development, production and marketing of theatrical productions across North America. Recent theatre credits include producing Grease, Rodgers and Hammerstein's Cinderella, Mary Poppins, Wizard of Oz, Beauty and the Beast and Aladdin. Productions have played across major U.S. regional theatres and international touring markets including Pasadena Playhouse, Tennessee Performing Arts Center and Kirk Douglas Theatre. MPI has produced over 50 musical theatre productions.";
 
 export default function ProducersPage() {
   return (
