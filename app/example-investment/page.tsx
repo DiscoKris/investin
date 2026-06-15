@@ -26,69 +26,88 @@ export default function ExampleInvestmentPage() {
               </div>
 
               <div className="mt-7 max-w-[41rem] space-y-6 text-[0.99rem] leading-[1.64] text-[var(--color-cream)] sm:text-[1.05rem] lg:mt-8">
-                <p className="text-[1.12rem] font-semibold text-[var(--color-gold)] sm:text-[1.2rem]">
+                <p className="text-[1.12rem] font-semibold text-[var(--color-white)] sm:text-[1.2rem]">
                   Pamela Dare invests <span className="font-bold">£100,000.</span>
                 </p>
 
                 <div className="space-y-3.5">
                   <p>
-                    The show nets{" "}
+                    The show generates approximately{" "}
                     <span className="font-semibold text-[var(--color-ivory)]">
-                      £230,000 a week
+                      £100,000
                     </span>{" "}
-                    with running costs of £130,000.
+                    in weekly operating profit after running costs.
                   </p>
                   <p>
-                    In 16 weeks the additional £100,000 per week equals £1.6
-                    million.
-                  </p>
-                  <p>
-                    The show capitalization cost is £1m, leaving a profit of{" "}
+                    Over a 16 week tour, this equals approximately{" "}
                     <span className="font-semibold text-[var(--color-ivory)]">
-                      £600,000.
-                    </span>
+                      £1.6m
+                    </span>{" "}
+                    in production profit.
+                  </p>
+                  <p>
+                    After repayment of the £1.2m production capitalisation,
+                    approximately{" "}
+                    <span className="font-semibold text-[var(--color-ivory)]">
+                      £400,000
+                    </span>{" "}
+                    remains in post-recoupment profit.
                   </p>
                 </div>
 
                 <div className="space-y-3.5">
                   <p>
-                    Pamela Dare receives her{" "}
-                    <span className="font-semibold text-[var(--color-ivory)]">
-                      £100,000
-                    </span>{" "}
-                    back plus profits.
-                  </p>
-                  <p>
-                    The profit to investors is{" "}
+                    Investors participate in{" "}
                     <span className="font-semibold text-[var(--color-ivory)]">
                       60%
                     </span>{" "}
-                    of the £600,000 or £360,000.
+                    of post-recoupment profit, creating an investor profit pool
+                    of approximately{" "}
+                    <span className="font-semibold text-[var(--color-ivory)]">
+                      £240,000.
+                    </span>
                   </p>
                   <p>
-                    Her investment represents{" "}
+                    Pamela Dare&apos;s investment represents approximately{" "}
                     <span className="font-semibold text-[var(--color-ivory)]">
-                      10%
+                      8.3%
                     </span>{" "}
                     of the{" "}
                     <span className="font-semibold text-[var(--color-ivory)]">
-                      £1m
-                    </span>{" "}
-                    capitalisation, so she receives 10% of the investors&apos;
-                    profit share, or{" "}
-                    <span className="font-semibold text-[var(--color-ivory)]">
-                      £36,000
+                      £1.2m
                     </span>
-                    .
+                     capitalisation.
+                  </p>
+                </div>
+
+                <div className="space-y-3.5">
+                  <p>
+                    At this performance level, Pamela Dare would receive her
+                    original{" "}
+                    <span className="font-semibold text-[var(--color-ivory)]">
+                      £100,000
+                    </span>{" "}
+                    investment back, plus approximately{" "}
+                    <span className="font-semibold text-[var(--color-ivory)]">
+                      £20,000
+                    </span>
+                    {" "}in additional profit participation.
+                  </p>
+                  <p>
+                    <span className="font-semibold text-[var(--color-gold)]">
+                      Total projected return:
+                    </span>{" "}
+                    <span className="font-semibold text-[var(--color-ivory)]">
+                      Approximately £120,000.
+                    </span>
                   </p>
                 </div>
 
                 <div className="rounded-[1.45rem] border border-[rgba(214,180,103,0.18)] bg-[rgba(8,13,10,0.16)] px-5 py-4">
-                  <p className="text-[0.82rem] font-semibold uppercase tracking-[0.16em] text-[var(--color-gold)]">
-                    
-                  </p>
-                  <p className="mt-2 text-[0.98rem] leading-[1.58] text-[var(--color-cream)]">
-                
+                  <p className="text-[0.9rem] leading-[1.58] text-[rgba(232,222,203,0.76)]">
+                    Illustrative example only. Actual returns depend on final
+                    box office performance, operating costs, Theatre Tax
+                    Relief, and formal investment documentation.
                   </p>
                 </div>
               </div>

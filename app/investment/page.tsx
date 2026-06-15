@@ -39,7 +39,7 @@ export default function InvestmentPage() {
                   <p className="text-[1rem] font-semibold leading-[1.72] text-[var(--color-ivory)] sm:text-[1.08rem]">
                     <span className="block">
                       UK Tour 2027 production capitalisation is{" "}
-                      <span className="text-[var(--color-gold)]">£1m</span>
+                      <span className="text-[var(--color-gold)]">£1.2m</span>
                     </span>
                     <span className="mt-4 block">
                       Weekly Operating Costs{" "}
@@ -68,7 +68,7 @@ export default function InvestmentPage() {
                     <p className="mt-2 text-[1rem] font-semibold leading-[1.72] text-[var(--color-ivory)] sm:text-[1.08rem]">
                       The production is forecast to break even at approximately{" "}
                       <span className="text-[var(--color-gold)]">
-                        65% capacity over 16 weeks
+                        69% capacity over 16 weeks
                       </span>
                       .
                       <br />

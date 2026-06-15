@@ -84,9 +84,9 @@ export default function LegacyPage() {
                 The Movie
               </p>
               <div className="mt-5 space-y-2 text-[1.5rem] font-semibold leading-[1.28] text-[var(--color-ivory)] sm:text-[1.8rem]">
-                <p>Grossed $42m on $1m Budget</p>
-                <p>#1 Song in US and UK</p>
-                <p>Still used in education today</p>
+                <p>Grossed $42m on a $1m Budget</p>
+                <p>#1 Song of 1967 in US and UK</p>
+                <p>Used in education today</p>
               </div>
             </div>
 

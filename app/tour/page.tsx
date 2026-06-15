@@ -2,6 +2,7 @@ import Image from "next/image";
 import { ContinueButton } from "@/components/continue-button";
 import { Reveal } from "@/components/reveal";
 import { ConcertFootageModal } from "@/app/tour/concert-footage-modal";
+import { LeedsAnnouncementModal } from "@/app/tour/leeds-announcement-modal";
 
 const tourWeeks = [
   { week: "Week 1-3:", details: "Leeds, April 15 2027" },
@@ -9,14 +10,15 @@ const tourWeeks = [
   { week: "Week 5:", details: "Blackpool, 10 May 2027" },
   { week: "Week 6:", details: "Windsor, 17 May 2027" },
   { week: "Week 7:", details: "Cheltenham, 24 May 2027" },
-  { week: "Week 8:", details: "Northampton, 7 June 2027" },
-  { week: "Week 9:", details: "Chesterfield, 14 June 2027" },
-  { week: "Week 10:", details: "Wolverhampton, 21 June 2027" },
-  { week: "Week 11:", details: "Chelmsford, 28 June 2027" },
-  { week: "Week 12:", details: "Malvern, 5 July 2027" },
-  { week: "Week 13:", details: "Portsmouth, 12 July 2027" },
-  { week: "Week 14:", details: "Liverpool, 19 July 2027" },
-  { week: "Week 15-16:", details: "London, 26 July 2027" },
+  { week: "Week 8:", details: "Portsmouth, 31 May 2027" },
+  { week: "Week 9:", details: "Northampton, 7 June 2027" },
+  { week: "Week 10:", details: "Chesterfield, 14 June 2027" },
+  { week: "Week 11:", details: "Wolverhampton, 21 June 2027" },
+  { week: "Week 12:", details: "Chelmsford, 28 June 2027" },
+  { week: "Week 13:", details: "Malvern, 5 July 2027" },
+  { week: "Week 14:", details: "Llandudno, 12 July 2027" },
+  { week: "Week 15:", details: "Liverpool, 19 July 2027" },
+  { week: "Week 16-17:", details: "London, 26 July 2027" },
 ];
 
 export default function TourPage() {
@@ -40,13 +42,14 @@ export default function TourPage() {
 
               <div className="mt-7 grid gap-y-2.5 sm:mt-8 lg:mt-7">
                 {tourWeeks.map((stop) => (
-                  <p
+                  <div
                     key={`${stop.week}-${stop.details}`}
-                    className="text-[0.98rem] leading-[1.42] text-[var(--color-ivory)] sm:text-[1.05rem] lg:text-[1.08rem]"
+                    className="flex flex-wrap items-center gap-x-3 gap-y-2 text-[0.98rem] leading-[1.42] text-[var(--color-ivory)] sm:text-[1.05rem] lg:text-[1.08rem]"
                   >
                     <span className="font-semibold">{stop.week}</span>{" "}
                     <span className="font-normal">{stop.details}</span>
-                  </p>
+                    {stop.week === "Week 1-3:" ? <LeedsAnnouncementModal /> : null}
+                  </div>
                 ))}
               </div>
 

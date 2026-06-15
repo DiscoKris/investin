@@ -10,11 +10,13 @@ const scenicRenders = [
     src: "/assets/walkin.jpg",
     alt: "Scenic production render for To Sir, With Love",
     tilt: "lg:rotate-[-1.2deg]",
+    imagePosition: "center 15%",
   },
   {
     src: "/assets/staffroom.jpg",
     alt: "Second scenic production render for To Sir, With Love",
     tilt: "lg:rotate-[1deg]",
+    imagePosition: "center 15%",
   },
 ];
 
@@ -50,9 +52,17 @@ export default function SetsCostumesPage() {
                       src="/assets/andy.jpg"
                       alt="Portrait of Andy Walmsley"
                       fill
-                      className="object-cover object-center brightness-[1.04] contrast-[1.04] saturate-[1.06] opacity-95"
+                      className="object-cover"
+                      style={{
+                        objectPosition: "center -20%",
+                        filter:
+                          "brightness(0.85) contrast(1.1) saturate(0.85)",
+                        transform: "scale(1.2)",
+                      }}
                       sizes="11rem"
                     />
+                    <div className="pointer-events-none absolute inset-0 bg-[rgba(0,0,0,0.18)]" />
+                    <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_28%_24%,rgba(255,255,255,0.14),transparent_24%),linear-gradient(180deg,transparent,rgba(7,15,11,0.18))]" />
                   </div>
                   <p className="mt-4 text-[1.12rem] font-semibold leading-[1.2] text-[var(--color-ivory)]">
                     Andy Walmsley
@@ -86,6 +96,7 @@ export default function SetsCostumesPage() {
                       width={1600}
                       height={980}
                       className="aspect-[1.26/1] w-full object-cover"
+                      style={{ objectPosition: render.imagePosition }}
                     />
                     <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,228,175,0.06),transparent_38%),linear-gradient(180deg,transparent,rgba(7,15,11,0.12))]" />
                   </div>

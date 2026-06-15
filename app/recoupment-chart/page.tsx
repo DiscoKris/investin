@@ -6,38 +6,38 @@ const capacities = [
   { label: "100%", accent: "text-[var(--color-gold)]" },
   { label: "90%", accent: "text-[var(--color-gold)]" },
   { label: "80%", accent: "text-[var(--color-gold)]" },
-  { label: "65%", accent: "text-[#b6e269]" },
+  { label: "69%", accent: "text-[#b6e269]" },
 ];
 
 const recoupmentRows = [
   {
     label: "Gross Box Office",
-    values: ["£ 480,000", "£ 432,000", "£ 384,000", "£312,000"],
+    values: ["£ 480,000", "£ 432,000", "£ 384,000", "£331,200"],
     emphasis: false,
   },
   {
     label: "VAT and credit card fees",
-    values: ["£ 104,000", "£ 93,600", "£ 83,200", "£67,600"],
+    values: ["£ 104,000", "£ 93,600", "£ 83,200", "£71,760"],
     emphasis: false,
   },
   {
     label: "Net Box Office",
-    values: ["£ 376,000", "£ 338,400", "£ 300,800", "£244,400"],
+    values: ["£ 376,000", "£ 338,400", "£ 300,800", "£259,440"],
     emphasis: true,
   },
   {
     label: "Royalties (16% of Net)",
-    values: ["£ 60,160", "£ 54,144", "£ 48,128", "£38,912"],
+    values: ["£ 60,160", "£ 54,144", "£ 48,128", "£41,510"],
     emphasis: false,
   },
   {
     label: "Venue Fee (split 80/20)",
-    values: ["£ 63,168", "£ 56,851", "£ 50,534", "£41,098"],
+    values: ["£ 63,168", "£ 56,851", "£ 50,534", "£43,586"],
     emphasis: false,
   },
   {
     label: "Weekly Surplus",
-    values: ["£ 252,672", "£ 227,405", "£ 202,138", "£164,391"],
+    values: ["£ 252,672", "£ 227,405", "£ 202,138", "£174,344"],
     emphasis: true,
   },
   {
@@ -47,17 +47,17 @@ const recoupmentRows = [
   },
   {
     label: "Weekly Profit* (Plus £10k Merch)",
-    values: ["£ 132,672", "£ 107,405", "£ 82,138", "£44,391"],
+    values: ["£ 132,672", "£ 107,405", "£ 82,138", "£54,344"],
     emphasis: true,
   },
   {
     label: "Total Profit (16 Weeks)",
-    values: ["£ 2,122,768", "£ 1,718,480", "£ 1,314,208", "£710,256"],
+    values: ["£ 2,122,768", "£ 1,718,480", "£ 1,314,208", "£869,499"],
     emphasis: false,
   },
   {
-    label: "Post Recoupment Profit (£1m)",
-    values: ["£ 1,122,768", "£ 718,480", "£ 314,208", "-£289,744"],
+    label: "Post Recoupment Profit (£1.2m)",
+    values: ["£ 922,768", "£ 518,480", "£ 114,208", "-£330,501"],
     emphasis: true,
   },
   {
@@ -67,7 +67,7 @@ const recoupmentRows = [
   },
   {
     label: "Projected Profit",
-    values: ["£ 1,422,768", "£ 1,018,480", "£ 614,208", "£10,256"],
+    values: ["£ 1,222,768", "£ 818,480", "£ 414,208", "-£30,501"],
     emphasis: true,
   },
 ];
@@ -86,7 +86,7 @@ const summaryRows = [
   {
     label: "Total Capitalisation:",
     qualifier: "",
-    value: "£1,000,000",
+    value: "£1,200,000",
     accent: true,
   },
 ];
@@ -185,7 +185,7 @@ export default function RecoupmentChartPage() {
                     </p>
 
                     {row.values.map((value, index) => {
-                      const is65 = capacities[index]?.label === "65%";
+                      const is69 = capacities[index]?.label === "69%";
                       const isNegative = value.startsWith("-");
 
                       return (
@@ -196,7 +196,7 @@ export default function RecoupmentChartPage() {
                               ? "font-semibold"
                               : "font-medium text-[var(--color-cream)]"
                           } ${
-                            is65
+                            is69
                               ? isNegative
                                 ? "text-[#c9df8d]"
                                 : "text-[#b6e269]"

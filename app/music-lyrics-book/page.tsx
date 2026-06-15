@@ -9,6 +9,8 @@ const creators = [
     role: "Music & Lyrics",
     imageSrc: "/assets/john.jpg",
     imageAlt: "Portrait of John Farrar",
+    imagePosition: "center -40%",
+    imageScale: 1.7,
     placeholder: false,
     placement: "lg:col-span-2",
   },
@@ -17,14 +19,18 @@ const creators = [
     role: "Music & Lyrics",
     imageSrc: "/assets/kara.jpeg",
     imageAlt: "Portrait of Kara DioGuardi",
+    imagePosition: "center 15%",
+    imageScale: 1.15,
     placeholder: false,
     placement: "lg:col-span-2",
   },
   {
-    name: "Kristopher Lythgoe",
+    name: "Kris Lythgoe",
     role: "Book",
     imageSrc: "/assets/kris.jpeg",
-    imageAlt: "Portrait of Kristopher Lythgoe",
+    imageAlt: "Portrait of Kris Lythgoe",
+    imagePosition: "center -1%",
+    imageScale: 1,
     placeholder: false,
     placement: "lg:col-span-2",
   },
@@ -33,6 +39,8 @@ const creators = [
     role: "Original Title Song Lyrics",
     imageSrc: "/assets/don.png",
     imageAlt: "Portrait of Don Black",
+    imagePosition: "center 22%",
+    imageScale: 1,
     placeholder: false,
     placement: "lg:col-start-2 lg:col-span-2",
   },
@@ -41,6 +49,8 @@ const creators = [
     role: "Original Title Song Music",
     imageSrc: "/assets/mark.png",
     imageAlt: "Portrait of Mark London",
+    imagePosition: "center -4%",
+    imageScale: 0.9,
     placeholder: false,
     placement: "lg:col-span-2",
   },
@@ -88,9 +98,16 @@ export default function MusicLyricsBookPage() {
                       src={creator.imageSrc}
                       alt={creator.imageAlt}
                       fill
-                      className="object-cover object-center brightness-[1.04] contrast-[1.04] saturate-[1.06] opacity-95 transition duration-300 group-hover:scale-[1.03]"
+                      className="object-cover transition duration-300 group-hover:scale-[1.03]"
+                      style={{
+                        objectPosition: creator.imagePosition,
+                        filter:
+                          "saturate(0.85) contrast(1.08) brightness(0.92) sepia(0.08)",
+                        transform: `scale(${creator.imageScale})`,
+                      }}
                       sizes="(min-width: 1280px) 14rem, (min-width: 1024px) 13rem, 14rem"
                     />
+                    <div className="pointer-events-none absolute inset-0 bg-[rgba(0,0,0,0.15)]" />
                     <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_28%_24%,rgba(255,255,255,0.16),transparent_24%),linear-gradient(180deg,transparent,rgba(7,15,11,0.22))]" />
                     {creator.placeholder ? (
                       <div className="absolute inset-x-4 bottom-4 rounded-full border border-[rgba(232,222,203,0.12)] bg-[rgba(8,13,10,0.56)] px-3 py-1">
@@ -113,8 +130,8 @@ export default function MusicLyricsBookPage() {
 
           <div className="relative z-10 mt-8 flex flex-col items-center text-center lg:mt-6">
             <Reveal className="flex flex-col items-center text-center">
-              <p className="text-[1rem] font-semibold uppercase tracking-[0.08em] text-[var(--color-ivory)] sm:text-[1.08rem]">
-                Click below to hear soundtrack samples
+              <p className="text-[1rem] font-semibold uppercase tracking-[0.08em] text-[var(--color-gold)] sm:text-[1.08rem]">
+                Click on play button to hear soundtrack samples
               </p>
               <div className="mt-5">
                 <SoundtrackModal />

@@ -2,6 +2,11 @@
 
 import { useState } from "react";
 
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xzdqrnwe";
+const SUCCESS_MESSAGE = "Thank you. Your enquiry has been sent successfully.";
+const ERROR_MESSAGE =
+  "We could not send your enquiry right now. Please try again.";
+
 type SubmissionState = "idle" | "success" | "error";
 
 export function ContactForm() {
@@ -18,40 +23,55 @@ export function ContactForm() {
 
     const form = event.currentTarget;
     const formData = new FormData(form);
-    const payload = {
-      name: String(formData.get("name") ?? "").trim(),
-      email: String(formData.get("email") ?? "").trim(),
-      message: String(formData.get("message") ?? "").trim(),
-    };
+    formData.set("name", String(formData.get("name") ?? "").trim());
+    formData.set("email", String(formData.get("email") ?? "").trim());
+    formData.set("message", String(formData.get("message") ?? "").trim());
 
     try {
-      const response = await fetch("/api/investor-enquiry", {
-        method: "POST",
+      const response = await fetch(form.action, {
+        method: form.method,
         headers: {
-          "Content-Type": "application/json",
+          Accept: "application/json",
         },
-        body: JSON.stringify(payload),
+        body: formData,
       });
 
-      if (!response.ok) {
+      const result = (await response.json().catch(() => null)) as
+        | { errors?: Array<{ message?: string }>; ok?: boolean }
+        | null;
+
+      if (!response.ok || result?.ok === false) {
+        console.error("Contact form submission failed.", {
+          status: response.status,
+          errors: result?.errors,
+        });
         throw new Error("Unable to send enquiry");
       }
 
       form.reset();
       setSubmissionState("success");
-      setStatusMessage("Your enquiry has been sent.");
-    } catch {
+      setStatusMessage(SUCCESS_MESSAGE);
+    } catch (error) {
+      console.error("Contact form submission errored.", { error });
       setSubmissionState("error");
-      setStatusMessage(
-        "We could not send your enquiry right now. Please try again."
-      );
+      setStatusMessage(ERROR_MESSAGE);
     } finally {
       setIsSubmitting(false);
     }
   }
 
   return (
-    <form className="card-panel rounded-[2rem] p-6 sm:p-8" onSubmit={handleSubmit}>
+    <form
+      action={FORMSPREE_ENDPOINT}
+      method="POST"
+      className="card-panel rounded-[2rem] p-6 sm:p-8"
+      onSubmit={handleSubmit}
+    >
+      <input
+        type="hidden"
+        name="_subject"
+        value="New To Sir, With Love Investor Enquiry"
+      />
       <div className="grid gap-5 sm:grid-cols-2">
         <label className="block">
           <span className="mb-2 block text-[10px] font-semibold tracking-[0.24em] text-[var(--color-gold)] uppercase">
@@ -95,9 +115,10 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
+        aria-disabled={isSubmitting}
         className="mt-6 inline-flex rounded-full bg-[var(--color-gold)] px-6 py-3 text-xs font-semibold tracking-[0.28em] uppercase text-[var(--color-ink)] disabled:cursor-not-allowed disabled:opacity-80"
       >
-        Send Enquiry
+        {isSubmitting ? "Sending..." : "Send Enquiry"}
       </button>
       <p
         aria-live="polite"

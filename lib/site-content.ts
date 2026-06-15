@@ -265,7 +265,7 @@ export const resourceLinks = {
   trailer: "https://youtu.be/oMAjca-pgr4",
   soundtrack: "https://on.soundcloud.com/oA0vsPmD8cO1KgXZm1",
   concert: "https://vimeo.com/1153007249/46d6e7bcca?fl=ip&fe=ec",
-  contact: "mailto:dearsir@tosirwithlovemusical.com",
+  contact: "mailto:krislythgoe@me.com",
 };
 
 export const creativeTeam = teamMembers;

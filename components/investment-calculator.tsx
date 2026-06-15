@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-const totalCapitalisation = 1000000;
+const totalCapitalisation = 1200000;
 
 const capacityScenarios = [
-  { capacity: "100%", projectedProfitPool: 1422768 },
-  { capacity: "90%", projectedProfitPool: 1018480 },
-  { capacity: "80%", projectedProfitPool: 614208 },
-  { capacity: "70%", projectedProfitPool: 10256 },
+  { capacity: "100%", projectedProfitPool: 1222768 },
+  { capacity: "90%", projectedProfitPool: 818480 },
+  { capacity: "80%", projectedProfitPool: 414208 },
+  { capacity: "69%", projectedProfitPool: -30501 },
 ];
 
 const formatCurrency = (value: number) =>
@@ -157,9 +157,11 @@ export function InvestmentCalculator() {
 
               <div className="border-t border-[rgba(232,222,203,0.12)] px-5 py-5 sm:px-6">
                 <p className="text-sm leading-7 text-[var(--color-mist)]">
-                  For illustrative purposes only. Not financial advice. Final
+                  Calculations are illustrative and based on the current
+                  £1.2m capitalisation model. Not financial advice. Final
                   returns depend on actual box office performance, costs,
-                  recoupment position and formal investment documents.
+                  recoupment position, Theatre Tax Relief, and formal
+                  investment documents.
                 </p>
               </div>
             </div>

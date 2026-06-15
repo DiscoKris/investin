@@ -4,8 +4,8 @@ import { Reveal } from "@/components/reveal";
 
 const investorEntitlements = [
   "Repayment of their subscriptions from 100% of the net surplus of the Production prior to recoupment, as determined following final settlement of the Production accounts.",
-  "Their percentage share of net profit (if any) on their respective terms following recoupment.",
-  "2 pairs of tickets to the official opening performance in Leeds and a pair of tickets at each venue of the tour subject to availability.",
+  "Their percentage share of net profits, if any, in accordance with their respective participation terms following recoupment.",
+  "Two pairs of tickets to the official opening performance in Leeds, together with one pair of tickets at each venue on the tour, subject to availability.",
 ];
 
 export default function TitlesAndTermsPage() {
@@ -42,6 +42,14 @@ export default function TitlesAndTermsPage() {
               <div className="mt-7 space-y-5 text-[0.98rem] leading-[1.55] text-[var(--color-cream)] sm:text-[1.04rem] lg:mt-8">
                 <div className="space-y-2">
                   <p>
+                    <span className="font-semibold uppercase text-[1.1em] text-[var(--color-gold)]">
+                      Minimum Investment:
+                    </span>{" "}
+                    <span className="text-[var(--color-ivory)]">
+                      £24,000 or $32,500
+                    </span>
+                  </p>
+                  <p>
                     <span className="font-semibold uppercase text-[var(--color-ivory)]">
                       Credit:
                     </span>
@@ -50,21 +58,20 @@ export default function TitlesAndTermsPage() {
                     <span className="font-semibold uppercase text-[var(--color-gold)]">
                       Co-Producer:
                     </span>{" "}
-                    second-line billing, ordered by investment size and date.
+                     for investment of £192,000+ (60% Terms)(2nd line billing, order by investment size and date),
                   </p>
                   <p>
                     <span className="font-semibold uppercase text-[var(--color-gold)]">
                       Associate Producer:
                     </span>{" "}
-                    (3rd line and below order of investment size, and date) for
-                    investments of £100,000 (60% Terms)
+                    for investments of £96,000+ (60% Terms) (3rd line and below order of investment size, and date) 
                   </p>
                   <p>
                     <span className="font-semibold uppercase text-[var(--color-gold)]">
-                      Standard Terms:
+                      INVESTOR:
                     </span>{" "}
-                    (No title billing) for investments below £99,999 (60%
-                    Terms)
+                    for investments of £24,000+ (60%
+                    Terms) (Investor billing) 
                   </p>
                 </div>
 
@@ -94,10 +101,10 @@ export default function TitlesAndTermsPage() {
                   <span className="font-semibold text-[var(--color-gold)]">
                     To Sir, With Love
                   </span>{" "}
-                  final recoupment and any investor distributions may be
-                  determined following full completion of the Production&apos;s
-                  final accounts, including full receipt of the Theatre Tax
-                  Relief claim.
+                  final recoupment calculations and any investor distributions
+                  may be determined following completion of the
+                  Production&apos;s final accounts, including full receipt of
+                  the applicable Theatre Tax Relief claim.
                 </p>
               </div>
 
