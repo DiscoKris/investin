@@ -1,0 +1,14 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "statements",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "investorUid", "order": "ASCENDING" },
+        { "fieldPath": "issued", "order": "ASCENDING" },
+        { "fieldPath": "statementDate", "order": "DESCENDING" }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

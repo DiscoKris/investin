@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, League_Spartan } from "next/font/google";
 import "./globals.css";
-import { SiteNav } from "@/components/site-nav";
-import { SiteFooter } from "@/components/site-footer";
+import { SiteChrome } from "@/components/site-chrome";
 
 const headline = League_Spartan({
   variable: "--font-headline",
@@ -37,11 +36,7 @@ export default function RootLayout({
     >
       <body className="min-h-full text-[var(--color-ivory)]">
         <div className="grain pointer-events-none fixed inset-0 z-0 opacity-35" />
-        <div className="relative z-10 flex min-h-screen flex-col">
-          <SiteNav />
-          <main className="flex-1">{children}</main>
-          <SiteFooter />
-        </div>
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   );

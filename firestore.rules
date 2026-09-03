@@ -1,0 +1,89 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return request.auth != null &&
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid)) &&
+        get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.active == true &&
+        get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.role == "admin";
+    }
+
+    function isActiveInvestor(investorUid) {
+      return signedIn() &&
+        exists(/databases/$(database)/documents/investors/$(investorUid)) &&
+        get(/databases/$(database)/documents/investors/$(investorUid)).data.authenticationUid == request.auth.uid &&
+        get(/databases/$(database)/documents/investors/$(investorUid)).data.investorStatus == "Active" &&
+        get(/databases/$(database)/documents/investors/$(investorUid)).data.get("isTest", false) != true;
+    }
+
+    match /admins/{adminUid} {
+      allow get: if request.auth != null
+        && request.auth.uid == adminUid;
+      allow list: if false;
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /investors/{investorUid} {
+      allow read, create, update, delete: if isAdmin();
+      allow get, list: if signedIn()
+        && resource.data.authenticationUid == request.auth.uid
+        && resource.data.investorStatus == "Active"
+        && resource.data.get("isTest", false) != true;
+      // Investor records are read-only to investors. Login metadata is written
+      // only by the trusted server after it validates the Firebase ID token.
+      allow create, update, delete: if false;
+    }
+
+    match /statements/{statementId} {
+      allow read, create, update, delete: if isAdmin();
+      allow read: if signedIn()
+        && isActiveInvestor(resource.data.investorUid)
+        && resource.data.investor.authenticationUid == request.auth.uid
+        && resource.data.issued == true;
+    }
+
+    match /statementDrafts/{uid} {
+      allow read, write: if isAdmin();
+    }
+
+    // Portal settings are stored at production/settings.
+    match /production/{documentId} {
+      allow read, write: if isAdmin();
+    }
+
+    // Engagement-wide Leeds, Hull and London gross totals.
+    match /theatres/{theatreId} {
+      allow read, write: if isAdmin();
+    }
+
+    match /theatreTerms/{theatreId} {
+      allow read, write: if isAdmin();
+    }
+
+    // Legacy performance records retained for backwards-compatible totals.
+    match /boxOfficeEntries/{entryId} {
+      allow read, write: if isAdmin();
+    }
+
+    match /adminAuditLog/{entryId} {
+      allow read, write: if isAdmin();
+    }
+
+    match /accountCounters/{counterId} {
+      allow read, write: if isAdmin();
+    }
+
+    match /statementDistributionLocks/{lockId} {
+      allow read, write: if isAdmin();
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
