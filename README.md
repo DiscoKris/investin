@@ -80,14 +80,17 @@ NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
 NEXT_PUBLIC_FIREBASE_APP_ID
 FIREBASE_ADMIN_PROJECT_ID
 FIREBASE_ADMIN_CLIENT_EMAIL
-FIREBASE_ADMIN_PRIVATE_KEY
+FIREBASE_ADMIN_WIF_AUDIENCE
 GOOGLE_SHEETS_DASHBOARD_URL
 ```
 
 These values identify the Firebase web app and are expected to be browser-visible.
 The three `FIREBASE_ADMIN_*` values and `GOOGLE_SHEETS_DASHBOARD_URL` are
-server-only and must not use the `NEXT_PUBLIC_` prefix. Store the private key with
-its newline escapes intact; the server converts `\\n` to real newlines at runtime.
+server-only and must not use the `NEXT_PUBLIC_` prefix. Production Firebase Admin
+access uses Vercel OIDC with Google Cloud Workload Identity Federation. Set
+`FIREBASE_ADMIN_WIF_AUDIENCE` to the provider's default audience URL; no
+service-account private key is stored. Local development may use Google
+Application Default Credentials when the workload identity audience is absent.
 
 ### Google Sheets dashboard summary
 
