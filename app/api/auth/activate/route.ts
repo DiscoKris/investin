@@ -6,6 +6,7 @@ import {
 } from "@/lib/portal/investor-link";
 
 export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
 
 const headers = { "Cache-Control": "private, no-store" };
 

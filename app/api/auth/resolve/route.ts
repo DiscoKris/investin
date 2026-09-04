@@ -7,6 +7,7 @@ import {
 } from "@/lib/portal/investor-link";
 
 export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
 
 const UNLINKED_MESSAGE =
   "Your account is not currently linked to an investor record. Please contact the production office.";
