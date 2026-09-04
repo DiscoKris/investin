@@ -1,92 +1,140 @@
 import Image from "next/image";
 import { ContinueButton } from "@/components/continue-button";
 import { Reveal } from "@/components/reveal";
+import {
+  capitalRequirement,
+  commercialScenarios,
+  formatGbp,
+  productionBreakEvenPercentage,
+  targetBreakEvenCapacity,
+  targetScenario,
+  totalGrossBoxOfficePotential,
+  totalPerformanceWeeks,
+  totalRunningCosts,
+  weeklyRunningCosts,
+  worldPremiereVenues,
+} from "@/lib/commercial-model";
 
-const capacities = [
-  { label: "100%", accent: "text-[var(--color-gold)]" },
-  { label: "90%", accent: "text-[var(--color-gold)]" },
-  { label: "80%", accent: "text-[var(--color-gold)]" },
-  { label: "69%", accent: "text-[#b6e269]" },
-];
+const capacities = commercialScenarios.map((scenario) => ({
+  label: scenario.label,
+  isTarget: scenario.capacity === targetBreakEvenCapacity,
+  accent:
+    scenario.accent === "green"
+      ? "text-[#b6e269]"
+      : scenario.accent === "downside"
+        ? "text-[#f0b48f]"
+      : "text-[var(--color-gold)]",
+}));
 
 const recoupmentRows = [
   {
-    label: "Gross Box Office",
-    values: ["£ 480,000", "£ 432,000", "£ 384,000", "£331,200"],
+    label: `Gross Box Office (${totalPerformanceWeeks} Weeks)`,
+    values: commercialScenarios.map((scenario) =>
+      formatGbp(scenario.grossBoxOffice),
+    ),
     emphasis: false,
   },
   {
     label: "VAT and credit card fees",
-    values: ["£ 104,000", "£ 93,600", "£ 83,200", "£71,760"],
+    values: commercialScenarios.map((scenario) =>
+      formatGbp(scenario.vatAndCardFees),
+    ),
     emphasis: false,
   },
   {
     label: "Net Box Office",
-    values: ["£ 376,000", "£ 338,400", "£ 300,800", "£259,440"],
+    values: commercialScenarios.map((scenario) =>
+      formatGbp(scenario.netBoxOffice),
+    ),
     emphasis: true,
   },
   {
     label: "Royalties (16% of Net)",
-    values: ["£ 60,160", "£ 54,144", "£ 48,128", "£41,510"],
+    values: commercialScenarios.map((scenario) =>
+      formatGbp(scenario.royalties),
+    ),
     emphasis: false,
   },
   {
-    label: "Venue Fee (split 80/20)",
-    values: ["£ 63,168", "£ 56,851", "£ 50,534", "£43,586"],
+    label: "Venue share (Hull percentage arrangement only)",
+    values: commercialScenarios.map((scenario) =>
+      formatGbp(scenario.venueCosts),
+    ),
     emphasis: false,
   },
   {
-    label: "Weekly Surplus",
-    values: ["£ 252,672", "£ 227,405", "£ 202,138", "£174,344"],
+    label: "Production Surplus",
+    values: commercialScenarios.map((scenario) =>
+      formatGbp(scenario.productionSurplus),
+    ),
     emphasis: true,
   },
   {
-    label: "Weekly Operating Costs",
-    values: ["£ 130,000", "£ 130,000", "£ 130,000", "£130,000"],
+    label: `Running Costs (${totalPerformanceWeeks} Weeks)`,
+    values: commercialScenarios.map((scenario) =>
+      formatGbp(scenario.totalRunningCosts),
+    ),
     emphasis: false,
   },
   {
-    label: "Weekly Profit* (Plus £10k Merch)",
-    values: ["£ 132,672", "£ 107,405", "£ 82,138", "£54,344"],
+    label: "Merchandise — excluded from this recoupment illustration",
+    values: commercialScenarios.map((scenario) =>
+      formatGbp(scenario.totalMerchandiseContribution),
+    ),
+    emphasis: false,
+  },
+  {
+    label: "Estimated Theatre Tax Relief",
+    values: commercialScenarios.map((scenario) =>
+      formatGbp(scenario.estimatedTheatreTaxRelief),
+    ),
+    emphasis: false,
+  },
+  {
+    label: "Less Capitalization",
+    values: commercialScenarios.map((scenario) =>
+      formatGbp(scenario.lessCapitalization),
+    ),
+    emphasis: false,
+  },
+  {
+    label: "Post-Recoupment Net Profit",
+    values: commercialScenarios.map((scenario) =>
+      formatGbp(scenario.postRecoupmentProfit),
+    ),
     emphasis: true,
   },
   {
-    label: "Total Profit (16 Weeks)",
-    values: ["£ 2,122,768", "£ 1,718,480", "£ 1,314,208", "£869,499"],
-    emphasis: false,
-  },
-  {
-    label: "Post Recoupment Profit (£1.2m)",
-    values: ["£ 922,768", "£ 518,480", "£ 114,208", "-£330,501"],
+    label: "Investor Profit Pool (60%)",
+    values: commercialScenarios.map((scenario) =>
+      formatGbp(scenario.investorProfitPool),
+    ),
     emphasis: true,
   },
   {
-    label: "Theatre Tax Relief (on 800k)",
-    values: ["£ 300,000", "£ 300,000", "£ 300,000", "£300,000"],
-    emphasis: false,
-  },
-  {
-    label: "Projected Profit",
-    values: ["£ 1,222,768", "£ 818,480", "£ 414,208", "-£30,501"],
+    label: "Investor Capital Still Unrecouped",
+    values: commercialScenarios.map((scenario) =>
+      formatGbp(scenario.unrecoupedCapital),
+    ),
     emphasis: true,
   },
 ];
 
 const summaryRows = [
   {
-    label: "Weekly Box Office Potential",
-    qualifier: "@ 100%",
-    value: "£ 480,000",
+    label: "Total Gross Box Office Potential",
+    qualifier: `${totalPerformanceWeeks} weeks`,
+    value: formatGbp(totalGrossBoxOfficePotential),
   },
   {
-    label: "Total Weekly Operating Costs",
-    qualifier: "",
-    value: "£ 130,000",
+    label: "Weekly Running Costs",
+    qualifier: `${formatGbp(totalRunningCosts)} total`,
+    value: formatGbp(weeklyRunningCosts),
   },
   {
-    label: "Total Capitalisation:",
+    label: "Required Capital Raise",
     qualifier: "",
-    value: "£1,200,000",
+    value: formatGbp(capitalRequirement),
     accent: true,
   },
 ];
@@ -113,18 +161,17 @@ export default function RecoupmentChartPage() {
                   Recoupment <span className="text-[var(--color-gold)]">Chart</span>
                 </h1>
                 <p className="mt-3 text-[0.98rem] font-semibold uppercase tracking-[0.08em] text-[var(--color-gold)] sm:text-[1.05rem] lg:text-[1.1rem]">
-                  Assumptions: £50 a ticket, 8 shows a week, 1200 Seat
-                  Capacity
+                  Five-week World Premiere: Leeds, Hull and London
                 </p>
               </div>
             </div>
 
-            <div className="mx-auto mt-6 w-full max-w-[34rem] rounded-[1.6rem] border border-[rgba(214,180,103,0.62)] bg-[rgba(12,14,13,0.72)] px-6 py-4 shadow-[0_18px_42px_rgba(0,0,0,0.26)] sm:px-8">
+            <div className="mx-auto mt-6 w-full max-w-[34rem] rounded-[1.4rem] border border-[rgba(214,180,103,0.62)] bg-[rgba(12,14,13,0.72)] px-5 py-4 shadow-[0_18px_42px_rgba(0,0,0,0.26)] sm:rounded-[1.6rem] sm:px-8">
               <div className="space-y-2.5">
                 {summaryRows.map((row) => (
                   <div
                     key={row.label}
-                    className="grid grid-cols-[1fr_auto_auto] items-center gap-3 text-[1rem] leading-[1.2] sm:text-[1.05rem]"
+                    className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-x-3 gap-y-1 text-[1rem] leading-[1.35] sm:grid-cols-[1fr_auto_auto] sm:items-center sm:text-[1.05rem]"
                   >
                     <p
                       className={`${
@@ -135,7 +182,7 @@ export default function RecoupmentChartPage() {
                     >
                       {row.label}
                     </p>
-                    <p className="text-[var(--color-cream)]">{row.qualifier}</p>
+                    <p className="hidden text-[var(--color-cream)] sm:block">{row.qualifier}</p>
                     <p
                       className={`text-right font-semibold ${
                         row.accent
@@ -145,13 +192,76 @@ export default function RecoupmentChartPage() {
                     >
                       {row.value}
                     </p>
+                    {row.qualifier ? (
+                      <p className="col-span-2 text-sm text-[var(--color-cream)] sm:hidden">
+                        {row.qualifier}
+                      </p>
+                    ) : null}
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="mt-7 overflow-hidden rounded-[1.9rem] border border-[rgba(214,180,103,0.72)] bg-[linear-gradient(90deg,rgba(2,3,3,0.88),rgba(44,44,44,0.72))] px-5 py-6 shadow-[0_20px_46px_rgba(0,0,0,0.3)] sm:px-7 lg:mt-8 lg:px-8 lg:py-7">
-              <div className="grid grid-cols-[1.55fr_repeat(4,minmax(0,1fr))] items-end gap-x-6 border-b border-[rgba(232,222,203,0.12)] pb-3">
+            <div className="mt-5 grid gap-3 sm:grid-cols-3">
+              {worldPremiereVenues.map((venue) => (
+                <div
+                  key={venue.venue}
+                  className="rounded-[1.25rem] border border-[rgba(214,180,103,0.2)] bg-[rgba(8,13,10,0.18)] px-4 py-4 text-center"
+                >
+                  <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[var(--color-gold)]">
+                    {venue.venue}
+                  </p>
+                  <p className="mt-1 text-lg font-semibold text-[var(--color-ivory)]">
+                    {formatGbp(venue.grossBoxOfficePotential)}
+                  </p>
+                  <p className="mt-1 text-sm text-[var(--color-mist)]">
+                    {venue.timing} · {venue.weeks}{" "}
+                    {venue.weeks === 1 ? "week" : "weeks"}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-7 grid gap-4 md:hidden">
+              {capacities.map((capacity, capacityIndex) => (
+                <article
+                  key={capacity.label}
+                  className="overflow-hidden rounded-[1.5rem] border border-[rgba(214,180,103,0.52)] bg-[linear-gradient(145deg,rgba(2,3,3,0.9),rgba(44,44,44,0.68))] shadow-[0_18px_40px_rgba(0,0,0,0.24)]"
+                >
+                  <div className="flex items-center justify-between gap-4 border-b border-[rgba(232,222,203,0.12)] px-5 py-4">
+                    <h2 className="text-[0.76rem] font-semibold uppercase tracking-[0.14em] text-[var(--color-cream)]">
+                      Percentage capacity
+                    </h2>
+                    <p className={`text-[1.45rem] font-bold leading-none ${capacity.accent}`}>
+                      {capacity.label}
+                    </p>
+                  </div>
+                  <dl className="px-5 py-3">
+                    {recoupmentRows.map((row) => {
+                      const value = row.values[capacityIndex];
+                      const isNegative = value.startsWith("-");
+
+                      return (
+                        <div
+                          key={`${capacity.label}-${row.label}`}
+                          className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-4 border-b border-[rgba(232,222,203,0.07)] py-3 last:border-b-0"
+                        >
+                          <dt className={`text-sm leading-5 ${row.emphasis ? "font-semibold text-[var(--color-gold)]" : "text-[var(--color-mist)]"}`}>
+                            {row.label}
+                          </dt>
+                          <dd className={`whitespace-nowrap text-right text-sm leading-5 ${row.emphasis ? "font-semibold" : "text-[var(--color-cream)]"} ${capacity.isTarget ? (isNegative ? "text-[#c9df8d]" : "text-[#b6e269]") : row.emphasis ? "text-[var(--color-gold)]" : ""}`}>
+                            {value}
+                          </dd>
+                        </div>
+                      );
+                    })}
+                  </dl>
+                </article>
+              ))}
+            </div>
+
+            <div className="mt-7 hidden overflow-x-auto rounded-[1.9rem] border border-[rgba(214,180,103,0.72)] bg-[linear-gradient(90deg,rgba(2,3,3,0.88),rgba(44,44,44,0.72))] px-5 py-6 shadow-[0_20px_46px_rgba(0,0,0,0.3)] sm:px-7 md:block lg:mt-8 lg:px-8 lg:py-7">
+              <div className="grid min-w-[68rem] grid-cols-[1.55fr_repeat(5,minmax(0,1fr))] items-end gap-x-4 border-b border-[rgba(232,222,203,0.12)] pb-3">
                 <div>
                   <p className="text-[1.06rem] font-semibold uppercase tracking-[0.04em] text-[var(--color-gold)] sm:text-[1.1rem]">
                     Percentage Capacity
@@ -172,7 +282,7 @@ export default function RecoupmentChartPage() {
                 {recoupmentRows.map((row) => (
                   <div
                     key={row.label}
-                    className="grid grid-cols-[1.55fr_repeat(4,minmax(0,1fr))] items-center gap-x-6 border-b border-[rgba(232,222,203,0.06)] py-2.5 last:border-b-0"
+                    className="grid min-w-[68rem] grid-cols-[1.55fr_repeat(5,minmax(0,1fr))] items-center gap-x-4 border-b border-[rgba(232,222,203,0.06)] py-2.5 last:border-b-0"
                   >
                     <p
                       className={`text-[0.98rem] leading-[1.2] sm:text-[1.02rem] ${
@@ -185,7 +295,8 @@ export default function RecoupmentChartPage() {
                     </p>
 
                     {row.values.map((value, index) => {
-                      const is69 = capacities[index]?.label === "69%";
+                      const isThreshold =
+                        capacities[index]?.isTarget;
                       const isNegative = value.startsWith("-");
 
                       return (
@@ -196,7 +307,7 @@ export default function RecoupmentChartPage() {
                               ? "font-semibold"
                               : "font-medium text-[var(--color-cream)]"
                           } ${
-                            is69
+                            isThreshold
                               ? isNegative
                                 ? "text-[#c9df8d]"
                                 : "text-[#b6e269]"
@@ -214,18 +325,44 @@ export default function RecoupmentChartPage() {
               </div>
             </div>
 
-            <div className="mt-5 rounded-[1.4rem] border border-[rgba(214,180,103,0.22)] bg-[linear-gradient(180deg,rgba(255,244,214,0.05),rgba(8,13,10,0.14))] px-5 py-4 shadow-[0_14px_34px_rgba(0,0,0,0.18)] sm:px-6">
+            <div className="mt-5 rounded-[1.4rem] border border-[rgba(182,226,105,0.28)] bg-[rgba(182,226,105,0.06)] px-5 py-4 sm:px-6">
               <p className="text-center text-[0.94rem] leading-[1.65] text-[var(--color-cream)] sm:text-[0.98rem]">
-                Investors can elect to roll over both{" "}
-                <span className="font-medium text-[var(--color-ivory)]">
-                  investment and profits
-                </span>{" "}
-                into future West End and Broadway productions, subject to
-                applicable offering terms and availability.
+                <span className="font-semibold uppercase tracking-[0.08em] text-[#b6e269]">Modeled recoupment point:</span>{" "}
+                approximately{" "}
+                <span className="font-semibold text-[#b6e269]">
+                  {productionBreakEvenPercentage} of modeled gross potential
+                </span>
+                , based on the assumptions shown and including estimated UK
+                Theatre Tax Relief. At this modeled point, new investor capital
+                is fully recouped and
+                Post-Recoupment Net Profit is{" "}
+                <span className="font-semibold text-[var(--color-ivory)]">
+                  {formatGbp(targetScenario.postRecoupmentProfit)}
+                </span>
+                . This is not a guarantee. Theatre Tax Relief is estimated and
+                remains subject to qualifying expenditure and a successful claim.
               </p>
             </div>
 
-            <ContinueButton href="/example-investment" className="lg:mt-8" />
+            <div className="mt-5 rounded-[1.4rem] border border-[rgba(240,180,143,0.34)] bg-[rgba(240,180,143,0.07)] px-5 py-4 sm:px-6">
+              <p className="text-center text-[0.94rem] leading-[1.65] text-[var(--color-cream)] sm:text-[0.98rem]">
+                <span className="font-semibold uppercase tracking-[0.08em] text-[#f0b48f]">50% capacity downside:</span>{" "}
+                lower box-office performance leaves{" "}
+                <span className="font-semibold text-[var(--color-ivory)]">
+                  {formatGbp(commercialScenarios.at(-1)?.unrecoupedCapital ?? 0)}
+                </span>{" "}
+                of total investor capital unrecouped in the model. Theatre
+                investment involves substantial risk; lower performance may
+                result in only partial return of capital or loss of the entire
+                investment.
+              </p>
+            </div>
+
+            <ContinueButton
+              href="/example-investment"
+              label="I NEED AN EXAMPLE"
+              className="lg:mt-8"
+            />
           </div>
         </Reveal>
       </div>

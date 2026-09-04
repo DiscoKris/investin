@@ -12,8 +12,14 @@ export function ConcertFootageModal() {
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
 
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") setOpen(false);
+    }
+
+    document.addEventListener("keydown", handleKeyDown);
     return () => {
       document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", handleKeyDown);
     };
   }, [open]);
 
@@ -23,15 +29,24 @@ export function ConcertFootageModal() {
         <button
           type="button"
           onClick={() => setOpen(true)}
-          className="inline-flex min-w-[14rem] items-center justify-center rounded-full border border-[rgba(210,178,116,0.46)] bg-[linear-gradient(180deg,rgba(248,241,229,0.96),rgba(229,216,191,0.92))] px-10 py-4 text-center text-[0.88rem] font-semibold uppercase tracking-[0.24em] text-[#263224] shadow-[0_14px_32px_rgba(0,0,0,0.2),0_0_0_1px_rgba(255,250,240,0.14)_inset] transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(210,178,116,0.76)] hover:bg-[linear-gradient(180deg,rgba(250,244,234,0.98),rgba(235,223,199,0.94))] hover:shadow-[0_18px_38px_rgba(0,0,0,0.24),0_0_0_1px_rgba(255,250,240,0.2)_inset] sm:min-w-[15rem] sm:px-11 sm:py-5 sm:text-[0.92rem]"
+          className="mobile-action inline-flex items-center justify-center rounded-full border border-[rgba(210,178,116,0.46)] bg-[linear-gradient(180deg,rgba(248,241,229,0.96),rgba(229,216,191,0.92))] px-5 py-4 text-center text-[0.78rem] font-semibold uppercase tracking-[0.14em] text-[#263224] shadow-[0_14px_32px_rgba(0,0,0,0.2),0_0_0_1px_rgba(255,250,240,0.14)_inset] transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(210,178,116,0.76)] hover:bg-[linear-gradient(180deg,rgba(250,244,234,0.98),rgba(235,223,199,0.94))] hover:shadow-[0_18px_38px_rgba(0,0,0,0.24),0_0_0_1px_rgba(255,250,240,0.2)_inset] sm:min-w-[15rem] sm:px-11 sm:py-5 sm:text-[0.92rem] sm:tracking-[0.24em]"
         >
           Watch Concert Highlights
         </button>
       </div>
 
       {open ? (
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-[rgba(6,10,8,0.82)] px-4 py-8 backdrop-blur-md">
-          <div className="relative z-[10000] w-full max-w-4xl">
+        <div
+          className="modal-backdrop bg-[rgba(6,10,8,0.82)] backdrop-blur-md"
+          onClick={() => setOpen(false)}
+        >
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-label="London concert highlights"
+            className="modal-surface relative max-w-4xl"
+            onClick={(event) => event.stopPropagation()}
+          >
             <div className="absolute left-0 top-[-2.75rem]">
               <Link
                 href="/producers"
@@ -43,7 +58,7 @@ export function ConcertFootageModal() {
             <button
               type="button"
               onClick={() => setOpen(false)}
-              className="absolute right-0 top-[-2.75rem] text-[0.82rem] font-medium uppercase tracking-[0.18em] text-[var(--color-cream)]"
+              className="modal-close absolute right-0 top-[-3rem] inline-flex items-center justify-center text-[0.82rem] font-medium uppercase tracking-[0.18em] text-[var(--color-cream)]"
             >
               Close
             </button>

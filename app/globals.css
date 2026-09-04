@@ -25,9 +25,11 @@
 
 html {
   scroll-padding-top: 4.5rem;
+  overflow-x: clip;
 }
 
 body {
+  background-color: var(--color-ink);
   background-image:
     linear-gradient(rgba(7, 28, 17, 0.42), rgba(7, 18, 12, 0.58)),
     url("/assets/tswlbackground.png");
@@ -41,6 +43,22 @@ body {
   line-height: 1.65;
   letter-spacing: -0.015em;
   text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+img,
+svg,
+video,
+canvas,
+iframe {
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
 }
 
 a,
@@ -74,6 +92,7 @@ textarea {
   letter-spacing: -0.03em;
   line-height: 0.98;
   text-wrap: balance;
+  overflow-wrap: break-word;
 }
 
 .eyebrow {
@@ -84,9 +103,9 @@ textarea {
 }
 
 .body-copy {
-  font-size: 0.975rem;
-  line-height: 1.8;
-  letter-spacing: -0.01em;
+  font-size: 1rem;
+  line-height: 1.75;
+  letter-spacing: 0;
 }
 
 .nav-type {
@@ -105,6 +124,91 @@ textarea {
 
 .section-shell {
   @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
+}
+
+.mobile-panel {
+  padding: 1.25rem;
+}
+
+.mobile-action {
+  min-height: 3rem;
+  width: 100%;
+  max-width: 28rem;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  padding: max(3.5rem, env(safe-area-inset-top)) 1rem
+    max(1rem, env(safe-area-inset-bottom));
+}
+
+.modal-surface {
+  width: calc(100vw - 2rem);
+  max-height: calc(100dvh - 4.5rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.modal-close {
+  min-height: 2.75rem;
+  min-width: 2.75rem;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+
+@media (min-width: 640px) {
+  .mobile-panel {
+    padding: 2rem;
+  }
+
+  .mobile-action {
+    width: auto;
+  }
+}
+
+@media (max-width: 374px) {
+  .section-shell {
+    padding-inline: 1.125rem;
+  }
+
+  h1,
+  h2 {
+    letter-spacing: -0.02em !important;
+  }
+
+  .eyebrow,
+  .button-type {
+    letter-spacing: 0.12em;
+  }
+}
+
+@media (max-width: 639px) {
+  body {
+    background-attachment: scroll;
+    font-size: 1rem;
+    line-height: 1.7;
+    letter-spacing: 0;
+  }
+
+  .headline {
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+  }
+
+  .card-panel {
+    border-color: rgba(232, 222, 203, 0.12);
+  }
 }
 
 .card-panel {

@@ -1,6 +1,16 @@
 import Image from "next/image";
 import { ContinueButton } from "@/components/continue-button";
 import { Reveal } from "@/components/reveal";
+import { InvestorFirst } from "@/components/investor-first";
+import {
+  capitalRequirement,
+  existingDevelopmentUnits,
+  formatGbp,
+  productionBreakEvenPercentage,
+  totalPerformanceWeeks,
+  totalOperatingCosts,
+  weeklyRunningCosts,
+} from "@/lib/commercial-model";
 
 export default function InvestmentPage() {
   return (
@@ -35,30 +45,37 @@ export default function InvestmentPage() {
               </Reveal>
 
               <Reveal delay={0.05}>
-                <div className="mt-7 max-w-[42rem] space-y-5 text-center lg:mt-8 lg:text-left">
-                  <p className="text-[1rem] font-semibold leading-[1.72] text-[var(--color-ivory)] sm:text-[1.08rem]">
-                    <span className="block">
-                      UK Tour 2027 production capitalisation is{" "}
-                      <span className="text-[var(--color-gold)]">£1.2m</span>
-                    </span>
-                    <span className="mt-4 block">
-                      Weekly Operating Costs{" "}
-                      <span className="text-[var(--color-gold)]">£130,000</span>
-                    </span>
-                    <span className="block text-[0.94rem] font-semibold leading-[1.7] text-[var(--color-cream)] sm:text-[0.98rem]">
-                      (Weekly Operating Costs Include Salaries, Production
-                      Staff, Marketing, Theatre Costs &amp; Admin)
-                    </span>
+                <div className="mt-7 max-w-[42rem] space-y-6 text-center lg:mt-8 lg:text-left">
+                  <dl className="grid gap-3 sm:grid-cols-3">
+                    <div className="rounded-[1.2rem] border border-[rgba(200,168,110,0.28)] bg-[rgba(8,13,10,0.16)] px-4 py-5">
+                      <dt className="text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[var(--color-gold)]">Capital Raise</dt>
+                      <dd className="mt-2 text-[1.65rem] font-bold leading-none text-[var(--color-ivory)]">{formatGbp(capitalRequirement)}</dd>
+                    </div>
+                    <div className="rounded-[1.2rem] border border-[rgba(200,168,110,0.28)] bg-[rgba(8,13,10,0.16)] px-4 py-5">
+                      <dt className="text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[var(--color-gold)]">Gross Potential Revenue</dt>
+                      <dd className="mt-2 text-[1.65rem] font-bold leading-none text-[var(--color-ivory)]">£2.25m</dd>
+                    </div>
+                    <div className="rounded-[1.2rem] border border-[rgba(200,168,110,0.28)] bg-[rgba(8,13,10,0.16)] px-4 py-5">
+                      <dt className="text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[var(--color-gold)]">Commercial Launch</dt>
+                      <dd className="mt-2 text-[1.65rem] font-bold leading-none text-[var(--color-ivory)]">Five Weeks</dd>
+                    </div>
+                  </dl>
+
+                  <p className="text-[1rem] font-semibold leading-[1.65] text-[var(--color-ivory)] sm:text-[1.08rem]">
+                    Weekly running costs are {formatGbp(weeklyRunningCosts)}, or{" "}
+                    {formatGbp(totalOperatingCosts)} across the World Premiere.
                   </p>
 
-                  <p className="text-[1rem] font-semibold leading-[1.72] text-[var(--color-ivory)] sm:text-[1.08rem]">
-                    Following 100% recoupment, net profits are split 60/40
-                    between investors and producers.
+                  <p className="text-[0.96rem] leading-[1.65] text-[var(--color-cream)] sm:text-[1rem]">
+                    The {existingDevelopmentUnits} Historic Development
+                    Participation Units are excluded from the recoupment tier
+                    and receive no distributions until new Investor Capital has
+                    been returned in full.
                   </p>
 
-                  <p className="text-[1rem] font-semibold leading-[1.72] text-[var(--color-ivory)] sm:text-[1.08rem]">
-                    All net operating profits are distributed to investors pro
-                    rata until recoupment.
+                  <p className="text-[1rem] font-semibold leading-[1.65] text-[var(--color-ivory)] sm:text-[1.08rem]">
+                    After Recoupment, Net Profits are split 60/40 between the
+                    Investors&apos; Profit Pool and Producer Participation Pool.
                   </p>
 
                   <div className="pt-1">
@@ -66,28 +83,26 @@ export default function InvestmentPage() {
                       Break Even
                     </p>
                     <p className="mt-2 text-[1rem] font-semibold leading-[1.72] text-[var(--color-ivory)] sm:text-[1.08rem]">
-                      The production is forecast to break even at approximately{" "}
+                      The modeled recoupment point is approximately{" "}
                       <span className="text-[var(--color-gold)]">
-                        69% capacity over 16 weeks
+                        {productionBreakEvenPercentage} capacity across the{" "}
+                        {totalPerformanceWeeks}-week World Premiere
                       </span>
-                      .
-                      <br />
-                      Theatre Tax Relief (TTR) is treated separately and
-                      provides additional downside protection rather than being
-                      relied upon.
+                      , including the benefit of estimated UK Theatre Tax
+                      Relief.{" "}
+                      Theatre Tax Relief is subject to qualifying expenditure
+                      and a successful claim.
                     </p>
                   </div>
-
-                  <p className="pt-1 text-[1rem] font-semibold leading-[1.72] text-[var(--color-gold)] sm:text-[1.08rem]">
-                    Additional revenue opportunities include merchandise,
-                    future licensing, cast recordings, and international
-                    productions.
-                  </p>
                 </div>
               </Reveal>
 
               <Reveal>
-                <ContinueButton href="/titles-and-terms" className="lg:mt-9" />
+                <ContinueButton
+                  href="/investment2"
+                  label="TELL ME MORE"
+                  className="lg:mt-9"
+                />
               </Reveal>
             </div>
 
@@ -119,6 +134,9 @@ export default function InvestmentPage() {
                 />
               </div>
             </Reveal>
+          </div>
+          <div className="relative z-10 mt-8">
+            <InvestorFirst compact />
           </div>
         </div>
       </section>

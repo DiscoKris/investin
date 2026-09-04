@@ -15,13 +15,14 @@ export const presentationFlow: PresentationRoute[] = [
   { href: "/er-braithwaite" },
   { href: "/music-lyrics-book" },
   { href: "/sets-costumes" },
-  { href: "/60th-anniversary-tour", aliases: ["/tour"] },
+  { href: "/tour", aliases: ["/60th-anniversary-tour"] },
   { href: "/producers" },
-  { href: "/investment" },
+  { href: "/investment", aliases: ["/investment2", "/investment3"] },
   { href: "/titles-and-terms" },
   { href: "/opportunity" },
   { href: "/recoupment-chart" },
   { href: "/example-investment" },
+  { href: "/weekly-investor-statements" },
   { href: "/disclaimer", aliases: ["/disclaimers"] },
 ];
 

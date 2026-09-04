@@ -61,7 +61,7 @@ const josephBio =
   "Orchestrations by Joseph Joubert, an acclaimed Broadway composer, arranger, conductor, and musical director whose work spans theatre, television, and symphonic music.\n\nJoubert served as musical director and conductor for the Tony Award-winning Broadway revival of Caroline, or Change and associate conductor for The Color Purple. His theatre credits also include Dreamgirls, Chicago, and Ain't Misbehavin'.\n\nHe has collaborated with legendary artists including Nina Simone, Gladys Knight, and Patti LaBelle, and is renowned for creating rich, cinematic orchestrations that blend jazz, gospel, and contemporary musical theatre.\n\nJoseph Joubert brings exceptional Broadway pedigree, musical sophistication, and emotional power to To Sir, With Love.";
 
 const krisBio =
-  "Kris Lythgoe comes from one of Britain’s best-known theatrical families and has spent more than two decades producing live entertainment across the United States and internationally.\n\nBorn in London and now based in Los Angeles, Kris has produced more than 40 professional theatrical productions, presenting work in major regional theatres, touring markets and family entertainment venues throughout North America.\n\nThroughout his career he has worked with an extraordinary range of performers including Ariana Grande, Sabrina Carpenter, Neil Patrick Harris, Ben Vereen, David Hasselhoff, Raven-Symoné, Olivia Holt, Kristen Bell and Wayne Brady.\n\nHis experience across producing, development, marketing and audience building provides a strong foundation for the long-term growth of To Sir, With Love beyond the UK tour, including future West End, Broadway and international opportunities.";
+  "Kris Lythgoe comes from one of Britain’s best-known theatrical families and has spent more than two decades producing live entertainment across the United States and internationally.\n\nBorn in London and now based in Los Angeles, Kris has produced more than 40 professional theatrical productions, presenting work in major regional theatres, touring markets and family entertainment venues throughout North America.\n\nThroughout his career he has worked with an extraordinary range of performers including Amy Winehouse, The Spice Girls, Ariana Grande, Sabrina Carpenter, Neil Patrick Harris, Ben Vereen, David Hasselhoff, Olivia Holt, Kristen Bell and Wayne Brady.\n\nHis experience across producing, development, marketing and audience building provides a strong foundation for launching To Sir, With Love through its World Premiere and building its future West End, Broadway and international life.";
 
 const visionaries = [
   {
@@ -164,7 +164,7 @@ export default function CreativeTeamPage() {
           <Reveal className="relative z-10 mt-9 flex justify-center lg:mt-8">
             <a
               href="#visionaries"
-              className="inline-flex items-center justify-center rounded-full border border-[rgba(200,168,110,0.44)] bg-[linear-gradient(180deg,rgba(244,236,222,0.9),rgba(223,209,183,0.88))] px-8 py-4 text-center text-[0.86rem] font-semibold uppercase tracking-[0.2em] text-[#253124] shadow-[0_12px_30px_rgba(0,0,0,0.18)] transition duration-200 hover:-translate-y-0.5 hover:border-[rgba(200,168,110,0.72)] hover:bg-[linear-gradient(180deg,rgba(247,241,230,0.96),rgba(230,217,192,0.92))] sm:px-10 sm:py-5 sm:text-[0.92rem]"
+              className="mobile-action inline-flex items-center justify-center rounded-full border border-[rgba(200,168,110,0.44)] bg-[linear-gradient(180deg,rgba(244,236,222,0.9),rgba(223,209,183,0.88))] px-5 py-4 text-center text-[0.78rem] font-semibold uppercase tracking-[0.12em] text-[#253124] shadow-[0_12px_30px_rgba(0,0,0,0.18)] transition duration-200 hover:-translate-y-0.5 hover:border-[rgba(200,168,110,0.72)] hover:bg-[linear-gradient(180deg,rgba(247,241,230,0.96),rgba(230,217,192,0.92))] sm:px-10 sm:py-5 sm:text-[0.92rem] sm:tracking-[0.2em]"
             >
               Meet the Visionaries
             </a>
@@ -228,7 +228,11 @@ export default function CreativeTeamPage() {
           </div>
 
           <Reveal className="relative z-10">
-            <ContinueButton href="/er-braithwaite" className="lg:mt-12" />
+            <ContinueButton
+              href="/er-braithwaite"
+              label="MEET MR BRAITHWAITE"
+              className="lg:mt-12"
+            />
           </Reveal>
         </div>
       </section>

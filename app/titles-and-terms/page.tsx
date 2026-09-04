@@ -3,9 +3,9 @@ import { ContinueButton } from "@/components/continue-button";
 import { Reveal } from "@/components/reveal";
 
 const investorEntitlements = [
-  "Repayment of their subscriptions from 100% of the net surplus of the Production prior to recoupment, as determined following final settlement of the Production accounts.",
-  "Their percentage share of net profits, if any, in accordance with their respective participation terms following recoupment.",
-  "Two pairs of tickets to the official opening performance in Leeds, together with one pair of tickets at each venue on the tour, subject to availability.",
+  "Repayment of accepted new Investor Capital from the recoupment tier, pro rata among holders of the new Investor Participation Units, as determined following final settlement of the Production accounts.",
+  "Following Recoupment, participation in the Investors' 60% Net Profit Pool, shared pro rata across all Investor Participation Units then outstanding.",
+  "Two pairs of tickets to the official opening performance in Leeds, together with one pair of tickets in Hull and London during the World Premiere production, subject to availability.",
 ];
 
 export default function TitlesAndTermsPage() {
@@ -30,25 +30,13 @@ export default function TitlesAndTermsPage() {
                   Titles & <span className="text-[var(--color-gold)]">Terms</span>
                 </h1>
 
-                <p className="mx-auto max-w-3xl text-center text-[0.92rem] leading-[1.65] text-[rgba(232,222,203,0.88)] sm:text-[0.98rem]">
-                  Foundational investors in the UK Tour production of{" "}
-                  <span className="text-[var(--color-gold)]">
-                    To Sir, With Love
-                  </span>{" "}
-                  can participate proportionally in future commercial transfer entities and/or designated subsidiary rights participation pools, including but not limited to West End and Broadway productions, subject to offering terms, production structure, and applicable securities regulations.
+                <p className="mx-auto max-w-full text-center text-[1.5rem] font-semibold leading-[1.25] text-[var(--color-gold)] sm:text-[1.7rem]">
+                  Minimum Investment: £20,000 ($27,000)
                 </p>
               </div>
 
-              <div className="mt-7 space-y-5 text-[0.98rem] leading-[1.55] text-[var(--color-cream)] sm:text-[1.04rem] lg:mt-8">
+              <div className="mt-9 space-y-5 text-[0.98rem] leading-[1.55] text-[var(--color-cream)] sm:text-[1.04rem] lg:mt-10">
                 <div className="space-y-2">
-                  <p>
-                    <span className="font-semibold uppercase text-[1.1em] text-[var(--color-gold)]">
-                      Minimum Investment:
-                    </span>{" "}
-                    <span className="text-[var(--color-ivory)]">
-                      £24,000 or $32,500
-                    </span>
-                  </p>
                   <p>
                     <span className="font-semibold uppercase text-[var(--color-ivory)]">
                       Credit:
@@ -58,26 +46,44 @@ export default function TitlesAndTermsPage() {
                     <span className="font-semibold uppercase text-[var(--color-gold)]">
                       Co-Producer:
                     </span>{" "}
-                     for investment of £192,000+ (60% Terms)(2nd line billing, order by investment size and date),
+                    standard guideline for investments of £160,000+ ($216,000+): 2nd-line billing, ordered by investment size and date.
                   </p>
                   <p>
                     <span className="font-semibold uppercase text-[var(--color-gold)]">
                       Associate Producer:
                     </span>{" "}
-                    for investments of £96,000+ (60% Terms) (3rd line and below order of investment size, and date) 
+                    standard guideline for investments of £80,000+ ($108,000+): 3rd-line billing and below, ordered by investment size and date.
                   </p>
                   <p>
                     <span className="font-semibold uppercase text-[var(--color-gold)]">
                       INVESTOR:
                     </span>{" "}
-                    for investments of £24,000+ (60%
-                    Terms) (Investor billing) 
+                    standard guideline for investments of £20,000+ ($27,000+): Investor billing.
                   </p>
                 </div>
 
                 <p>
+                  Producer credit levels shown are standard guidelines and
+                  remain subject to Producer approval and discretion. Any
+                  credit must be separately agreed and is not automatic.
+                </p>
+
+                <p>
+                  <span className="font-semibold text-[var(--color-gold)]">Post-Recoupment Investor Participation:</span>{" "}
+                  Following Recoupment, investors participate in the Investors&apos;
+                  60% Net Profit Pool, shared pro rata across all Investor
+                  Participation Units then outstanding.
+                </p>
+
+                <p>
                   Full investment is due upon acceptance and signature of the
-                  Participation Agreement.
+                  Subscription Agreement and applicable investment documents.
+                </p>
+
+                <p className="text-[0.92rem] text-[rgba(232,222,203,0.78)]">
+                  USD equivalents are illustrative. Actual USD subscriptions
+                  will be calculated using the applicable agreed GBP/USD
+                  exchange rate.
                 </p>
 
                 <div className="space-y-2.5">
@@ -96,19 +102,43 @@ export default function TitlesAndTermsPage() {
                   </ul>
                 </div>
 
-                <p>
-                  Due to the limited tour length of{" "}
-                  <span className="font-semibold text-[var(--color-gold)]">
-                    To Sir, With Love
-                  </span>{" "}
-                  final recoupment calculations and any investor distributions
-                  may be determined following completion of the
-                  Production&apos;s final accounts, including full receipt of
-                  the applicable Theatre Tax Relief claim.
-                </p>
+                <div className="space-y-3 border-t border-[rgba(200,168,110,0.25)] pt-5">
+                  <h2 className="font-semibold uppercase tracking-[0.12em] text-[var(--color-gold)]">
+                    FOUNDATIONAL INVESTOR CONTINUATION RIGHTS
+                  </h2>
+                  <p className="font-semibold text-[var(--color-ivory)]">
+                    Foundational Investors have the guaranteed first
+                    opportunity to maintain their proportional Participation
+                    Interest in qualifying future Transfer Productions,
+                    including West End, Broadway and international productions,
+                    by investing their corresponding share of the new
+                    capitalization.
+                  </p>
+                  <p>
+                    Reinvestment is optional. Investors may take their returned
+                    capital or reinvest to maintain their proportional
+                    participation.
+                  </p>
+                  <p>
+                    Future productions are not guaranteed, and the original
+                    World Premiere investment does not automatically carry into
+                    them. Each future production will have its own
+                    capitalization and definitive investment documents.
+                  </p>
+                  <p>
+                    Because the World Premiere runs for five weeks, final
+                    recoupment and investor returns may be confirmed following
+                    completion of the final production accounts and receipt of
+                    the applicable Theatre Tax Relief claim.
+                  </p>
+                </div>
               </div>
 
-              <ContinueButton href="/opportunity" className="lg:mt-8" />
+              <ContinueButton
+                href="/opportunity"
+                label="GRAB THE OPPORTUNITY"
+                className="lg:mt-8"
+              />
             </div>
           </Reveal>
 

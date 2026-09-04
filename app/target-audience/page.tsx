@@ -31,7 +31,7 @@ export default function TargetAudiencePage() {
                   <span className="text-[var(--color-ivory)]">Target </span>
                   <span className="text-[var(--color-gold)]">Audience</span>
                 </h1>
-                <p className="mt-3 text-[1rem] font-medium leading-[1.45] text-[var(--color-ivory)] sm:text-[1.08rem]">
+                <p className="mx-auto mt-5 max-w-[44rem] text-[2rem] font-semibold leading-[1.08] tracking-[-0.025em] text-[var(--color-ivory)] sm:text-[2.2rem] lg:text-[2.5rem]">
                   A timeless coming-of-age story for a new generation.
                 </p>
               </div>
@@ -72,7 +72,11 @@ export default function TargetAudiencePage() {
           </div>
 
           <Reveal className="relative z-10">
-            <ContinueButton href="/creative-team" className="lg:mt-12" />
+            <ContinueButton
+              href="/creative-team"
+              label="MEET THE TEAM"
+              className="lg:mt-12"
+            />
           </Reveal>
         </div>
       </section>

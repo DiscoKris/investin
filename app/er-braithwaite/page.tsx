@@ -94,7 +94,11 @@ export default function ErBraithwaitePage() {
           </div>
 
           <Reveal className="relative z-10">
-            <ContinueButton href="/music-lyrics-book" className="lg:mt-6" />
+            <ContinueButton
+              href="/music-lyrics-book"
+              label="MEET THE SONGWRITERS"
+              className="lg:mt-6"
+            />
           </Reveal>
         </div>
       </section>

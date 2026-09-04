@@ -130,8 +130,8 @@ export default function MusicLyricsBookPage() {
 
           <div className="relative z-10 mt-8 flex flex-col items-center text-center lg:mt-6">
             <Reveal className="flex flex-col items-center text-center">
-              <p className="text-[1rem] font-semibold uppercase tracking-[0.08em] text-[var(--color-gold)] sm:text-[1.08rem]">
-                Click on play button to hear soundtrack samples
+              <p className="text-[2rem] font-bold uppercase leading-tight tracking-[0.1em] text-[var(--color-ivory)] [text-shadow:0_2px_10px_rgba(0,0,0,0.55)] sm:text-[2.15rem]">
+                LISTEN TO THE SONGS PRESS PLAY
               </p>
               <div className="mt-5">
                 <SoundtrackModal />
@@ -172,17 +172,23 @@ export default function MusicLyricsBookPage() {
           </Reveal>
 
           <Reveal className="relative z-10 mt-7 sm:mt-8">
-            <div className="mx-auto flex max-w-[46rem] flex-col items-center gap-3 rounded-[1.75rem] border border-[rgba(214,180,103,0.22)] bg-[linear-gradient(180deg,rgba(54,82,53,0.38),rgba(23,38,25,0.2))] px-6 py-5 text-center shadow-[0_16px_38px_rgba(0,0,0,0.12)] sm:px-8 sm:py-6">
-              <p className="text-[1rem] leading-[1.45] text-[var(--color-ivory)] sm:text-[1.08rem] lg:text-[1.14rem]">
-                <span className="mr-3 text-[var(--color-gold)]">•</span>
+            <div className="mx-auto flex max-w-[50rem] flex-col items-center gap-6 rounded-[1.75rem] border border-[rgba(214,180,103,0.22)] bg-[linear-gradient(180deg,rgba(54,82,53,0.38),rgba(23,38,25,0.2))] px-5 py-7 text-center shadow-[0_16px_38px_rgba(0,0,0,0.12)] sm:gap-7 sm:px-8 sm:py-8 lg:px-10">
+              <p className="text-[1.75rem] font-semibold leading-[1.4] text-[var(--color-ivory)] sm:text-[2rem] lg:text-[2.25rem]">
+                <span className="mr-4 inline-block text-[1.35em] leading-none text-[var(--color-gold)]">
+                  •
+                </span>
                 Sold nearly 500 million records combined
               </p>
-              <p className="text-[1rem] leading-[1.45] text-[var(--color-ivory)] sm:text-[1.08rem] lg:text-[1.14rem]">
-                <span className="mr-3 text-[var(--color-gold)]">•</span>
+              <p className="text-[1.75rem] font-semibold leading-[1.4] text-[var(--color-ivory)] sm:text-[2rem] lg:text-[2.25rem]">
+                <span className="mr-4 inline-block text-[1.35em] leading-none text-[var(--color-gold)]">
+                  •
+                </span>
                 Grammy winners and Oscar-nominated songwriters
               </p>
-              <p className="text-[1rem] leading-[1.45] text-[var(--color-ivory)] sm:text-[1.08rem] lg:text-[1.14rem]">
-                <span className="mr-3 text-[var(--color-gold)]">•</span>
+              <p className="text-[1.75rem] font-semibold leading-[1.4] text-[var(--color-ivory)] sm:text-[2rem] lg:text-[2.25rem]">
+                <span className="mr-4 inline-block text-[1.35em] leading-none text-[var(--color-gold)]">
+                  •
+                </span>
                 Writers of some of the most iconic hits in film and popular music
               </p>
             </div>
@@ -191,8 +197,12 @@ export default function MusicLyricsBookPage() {
           <div className="relative z-10 mt-9 grid gap-10 lg:mt-10 lg:grid-cols-2 lg:gap-12">
             <Reveal>
               <div className="max-w-[34rem]">
-                <h3 className="text-[1.7rem] font-bold leading-[1.02] tracking-[-0.03em] text-[var(--color-ivory)] sm:text-[1.95rem] lg:text-[2.35rem]">
-                  John Farrar - Music & Lyrics
+                <h3 className="text-[1.7rem] font-bold leading-[1.08] tracking-[-0.035em] text-[var(--color-ivory)] sm:text-[1.95rem] lg:whitespace-nowrap lg:text-[1.65rem] xl:text-[1.85rem]">
+                  <span>John Farrar</span>
+                  <span className="block sm:inline">
+                    <span className="hidden sm:inline"> - </span>
+                    Music & Lyrics
+                  </span>
                 </h3>
                 <p className="mt-6 whitespace-pre-line text-[1.02rem] leading-[1.8] text-[var(--color-cream)] sm:text-[1.08rem]">
                   {johnFarrarBio}
@@ -202,8 +212,12 @@ export default function MusicLyricsBookPage() {
 
             <Reveal delay={0.08}>
               <div className="max-w-[34rem]">
-                <h3 className="text-[1.7rem] font-bold leading-[1.02] tracking-[-0.03em] text-[var(--color-ivory)] sm:text-[1.95rem] lg:text-[2.35rem]">
-                  Kara DioGuardi - Music & Lyrics
+                <h3 className="text-[1.7rem] font-bold leading-[1.08] tracking-[-0.035em] text-[var(--color-ivory)] sm:text-[1.95rem] lg:whitespace-nowrap lg:text-[1.65rem] xl:text-[1.85rem]">
+                  <span>Kara DioGuardi</span>
+                  <span className="block sm:inline">
+                    <span className="hidden sm:inline"> - </span>
+                    Music & Lyrics
+                  </span>
                 </h3>
                 <p className="mt-6 whitespace-pre-line text-[1.02rem] leading-[1.8] text-[var(--color-cream)] sm:text-[1.08rem]">
                   {karaDioGuardiBio}
@@ -213,7 +227,11 @@ export default function MusicLyricsBookPage() {
           </div>
 
           <Reveal className="relative z-10">
-            <ContinueButton href="/sets-costumes" className="lg:mt-12" />
+            <ContinueButton
+              href="/sets-costumes"
+              label="SEE THE SETS"
+              className="lg:mt-12"
+            />
           </Reveal>
         </div>
       </section>

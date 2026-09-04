@@ -20,99 +20,69 @@ export default function ExampleInvestmentPage() {
                   className="h-auto w-[7.25rem] sm:w-[8rem]"
                 />
 
-                <h1 className="text-left text-[2.2rem] font-bold uppercase leading-[0.96] tracking-[-0.04em] text-[var(--color-ivory)] sm:text-[2.85rem] lg:text-[4rem]">
-                  Example <span className="text-[var(--color-gold)]">Investment</span>
+                <h1 className="text-left text-[2.2rem] font-bold uppercase leading-[0.96] tracking-[-0.04em] text-[var(--color-ivory)] sm:text-[2.85rem] lg:text-[3.65rem]">
+                  Pamela Dare Invests{" "}
+                  <span className="text-[var(--color-gold)]">£100,000</span>
                 </h1>
               </div>
 
-              <div className="mt-7 max-w-[41rem] space-y-6 text-[0.99rem] leading-[1.64] text-[var(--color-cream)] sm:text-[1.05rem] lg:mt-8">
-                <p className="text-[1.12rem] font-semibold text-[var(--color-white)] sm:text-[1.2rem]">
-                  Pamela Dare invests <span className="font-bold">£100,000.</span>
+              <div className="mt-7 max-w-[42rem] space-y-7 text-[1rem] leading-[1.6] text-[var(--color-cream)] sm:text-[1.06rem] lg:mt-8">
+                <p className="text-[1.08rem] leading-[1.65] text-[var(--color-ivory)] sm:text-[1.16rem]">
+                  Pamela invests <strong>£100,000</strong> in the World Premiere
+                  of <em>To Sir, With Love</em>.
                 </p>
 
-                <div className="space-y-3.5">
-                  <p>
-                    The show generates approximately{" "}
-                    <span className="font-semibold text-[var(--color-ivory)]">
-                      £100,000
-                    </span>{" "}
-                    in weekly operating profit after running costs.
-                  </p>
-                  <p>
-                    Over a 16 week tour, this equals approximately{" "}
-                    <span className="font-semibold text-[var(--color-ivory)]">
-                      £1.6m
-                    </span>{" "}
-                    in production profit.
-                  </p>
-                  <p>
-                    After repayment of the £1.2m production capitalisation,
-                    approximately{" "}
-                    <span className="font-semibold text-[var(--color-ivory)]">
-                      £400,000
-                    </span>{" "}
-                    remains in post-recoupment profit.
-                  </p>
+                <p>
+                  If the production performs at <strong>100% of its modelled
+                  venue capacities</strong>, the current financial model projects
+                  that Pamela receives:
+                </p>
+
+                <div className="rounded-[1.75rem] border border-[rgba(200,168,110,0.42)] bg-[linear-gradient(145deg,rgba(200,168,110,0.12),rgba(8,13,10,0.22))] px-5 py-7 text-center shadow-[0_18px_42px_rgba(0,0,0,0.18)] sm:px-8 sm:py-8">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-gold)]">Pamela Invests</p>
+                    <p className="mt-2 text-[2.1rem] font-bold leading-none text-[var(--color-ivory)] sm:text-[2.5rem]">£100,000</p>
+                  </div>
+
+                  <p aria-hidden="true" className="my-4 text-2xl text-[var(--color-gold)]">↓</p>
+
+                  <div className="grid items-center gap-4 sm:grid-cols-[1fr_auto_1fr]">
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--color-gold)]">Her Original Investment Back</p>
+                      <p className="mt-2 text-[2rem] font-bold leading-none text-[var(--color-ivory)] sm:text-[2.3rem]">£100,000</p>
+                    </div>
+                    <p aria-hidden="true" className="text-2xl font-semibold text-[var(--color-gold)]">+</p>
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--color-gold)]">Plus Potential Profit</p>
+                      <p className="mt-2 text-[2rem] font-bold leading-none text-[var(--color-ivory)] sm:text-[2.3rem]">£30,000</p>
+                    </div>
+                  </div>
+
+                  <p aria-hidden="true" className="my-4 text-2xl font-semibold text-[var(--color-gold)]">=</p>
+
+                  <div className="border-t border-[rgba(200,168,110,0.3)] pt-5">
+                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-gold)]">Potential Total Cash Returned</p>
+                    <p className="mt-3 text-[clamp(3.2rem,10vw,5.5rem)] font-bold leading-none tracking-[-0.055em] text-[var(--color-ivory)]">£130,000</p>
+                  </div>
                 </div>
 
-                <div className="space-y-3.5">
-                  <p>
-                    Investors participate in{" "}
-                    <span className="font-semibold text-[var(--color-ivory)]">
-                      60%
-                    </span>{" "}
-                    of post-recoupment profit, creating an investor profit pool
-                    of approximately{" "}
-                    <span className="font-semibold text-[var(--color-ivory)]">
-                      £240,000.
-                    </span>
-                  </p>
-                  <p>
-                    Pamela Dare&apos;s investment represents approximately{" "}
-                    <span className="font-semibold text-[var(--color-ivory)]">
-                      8.3%
-                    </span>{" "}
-                    of the{" "}
-                    <span className="font-semibold text-[var(--color-ivory)]">
-                      £1.2m
-                    </span>
-                     capitalisation.
-                  </p>
-                </div>
+                <p className="text-[1.05rem] font-bold leading-[1.6] text-[var(--color-gold)] sm:text-[1.12rem]">
+                  Her £100,000 comes back first, with approximately £30,000
+                  additional projected profit at this performance level.
+                </p>
 
-                <div className="space-y-3.5">
-                  <p>
-                    At this performance level, Pamela Dare would receive her
-                    original{" "}
-                    <span className="font-semibold text-[var(--color-ivory)]">
-                      £100,000
-                    </span>{" "}
-                    investment back, plus approximately{" "}
-                    <span className="font-semibold text-[var(--color-ivory)]">
-                      £20,000
-                    </span>
-                    {" "}in additional profit participation.
-                  </p>
-                  <p>
-                    <span className="font-semibold text-[var(--color-gold)]">
-                      Total projected return:
-                    </span>{" "}
-                    <span className="font-semibold text-[var(--color-ivory)]">
-                      Approximately £120,000.
-                    </span>
-                  </p>
-                </div>
-
-                <div className="rounded-[1.45rem] border border-[rgba(214,180,103,0.18)] bg-[rgba(8,13,10,0.16)] px-5 py-4">
-                  <p className="text-[0.9rem] leading-[1.58] text-[rgba(232,222,203,0.76)]">
-                    Illustrative example only. Actual returns depend on final
-                    box office performance, operating costs, Theatre Tax
-                    Relief, and formal investment documentation.
-                  </p>
-                </div>
+                <p className="text-sm leading-6 text-[rgba(232,222,203,0.7)]">
+                  Illustrative only. Actual returns depend on box office
+                  performance, production costs, Theatre Tax Relief and the
+                  definitive investment terms.
+                </p>
               </div>
 
-              <ContinueButton href="/disclaimer" className="lg:mt-8" />
+              <ContinueButton
+                href="/weekly-investor-statements"
+                label="TRANSPARENCY"
+                className="lg:mt-8"
+              />
             </div>
           </Reveal>
 

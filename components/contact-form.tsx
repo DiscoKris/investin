@@ -64,7 +64,7 @@ export function ContactForm() {
     <form
       action={FORMSPREE_ENDPOINT}
       method="POST"
-      className="card-panel rounded-[2rem] p-6 sm:p-8"
+      className="card-panel mobile-panel rounded-[1.5rem] sm:rounded-[2rem]"
       onSubmit={handleSubmit}
     >
       <input
@@ -83,7 +83,7 @@ export function ContactForm() {
             autoComplete="name"
             required
             placeholder="Your name"
-            className="w-full rounded-2xl border border-[rgba(232,222,203,0.14)] bg-[rgba(255,255,255,0.05)] px-4 py-3 text-sm text-[var(--color-ivory)] outline-none"
+            className="min-h-12 w-full rounded-2xl border border-[rgba(232,222,203,0.14)] bg-[rgba(255,255,255,0.05)] px-4 py-3 text-base text-[var(--color-ivory)] outline-none focus:border-[rgba(200,168,110,0.58)]"
           />
         </label>
         <label className="block">
@@ -96,7 +96,7 @@ export function ContactForm() {
             autoComplete="email"
             required
             placeholder="investor@example.com"
-            className="w-full rounded-2xl border border-[rgba(232,222,203,0.14)] bg-[rgba(255,255,255,0.05)] px-4 py-3 text-sm text-[var(--color-ivory)] outline-none"
+            className="min-h-12 w-full rounded-2xl border border-[rgba(232,222,203,0.14)] bg-[rgba(255,255,255,0.05)] px-4 py-3 text-base text-[var(--color-ivory)] outline-none focus:border-[rgba(200,168,110,0.58)]"
           />
         </label>
       </div>
@@ -109,14 +109,14 @@ export function ContactForm() {
           name="message"
           required
           placeholder="Please send me the investor presentation and next-step details."
-          className="w-full rounded-[1.5rem] border border-[rgba(232,222,203,0.14)] bg-[rgba(255,255,255,0.05)] px-4 py-3 text-sm text-[var(--color-ivory)] outline-none"
+          className="w-full rounded-[1.5rem] border border-[rgba(232,222,203,0.14)] bg-[rgba(255,255,255,0.05)] px-4 py-3 text-base text-[var(--color-ivory)] outline-none focus:border-[rgba(200,168,110,0.58)]"
         />
       </label>
       <button
         type="submit"
         disabled={isSubmitting}
         aria-disabled={isSubmitting}
-        className="mt-6 inline-flex rounded-full bg-[var(--color-gold)] px-6 py-3 text-xs font-semibold tracking-[0.28em] uppercase text-[var(--color-ink)] disabled:cursor-not-allowed disabled:opacity-80"
+        className="mobile-action mt-6 inline-flex items-center justify-center rounded-full bg-[var(--color-gold)] px-6 py-3 text-xs font-semibold tracking-[0.18em] uppercase text-[var(--color-ink)] disabled:cursor-not-allowed disabled:opacity-80 sm:tracking-[0.28em]"
       >
         {isSubmitting ? "Sending..." : "Send Enquiry"}
       </button>

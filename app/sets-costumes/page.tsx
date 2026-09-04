@@ -68,7 +68,7 @@ export default function SetsCostumesPage() {
                     Andy Walmsley
                   </p>
                   <p className="mt-1 text-[0.86rem] font-medium uppercase tracking-[0.14em] text-[var(--color-gold)]">
-                    Set Designer
+                    Set &amp; Costume Designer
                   </p>
                 </Reveal>
               </div>
@@ -126,7 +126,10 @@ export default function SetsCostumesPage() {
             </Reveal>
 
             <Reveal>
-              <ContinueButton href="/60th-anniversary-tour" />
+              <ContinueButton
+                href="/tour"
+                label="WHERE ARE WE GOING?"
+              />
             </Reveal>
           </div>
         </div>

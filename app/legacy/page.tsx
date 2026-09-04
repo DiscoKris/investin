@@ -84,13 +84,19 @@ export default function LegacyPage() {
                 The Movie
               </p>
               <div className="mt-5 space-y-2 text-[1.5rem] font-semibold leading-[1.28] text-[var(--color-ivory)] sm:text-[1.8rem]">
-                <p>Grossed $42m on a $1m Budget</p>
-                <p>#1 Song of 1967 in US and UK</p>
+                <p>Approximately $42 Million Worldwide Box Office</p>
+                <p>Approximately $600,000 Production Budget</p>
+                <p>Equates to 70× Return on Studio Investment</p>
+                <p>Billboard&apos;s #1 Song of 1967 in the U.S.</p>
                 <p>Used in education today</p>
               </div>
             </div>
 
-            <ContinueButton href="/why-now" className="mt-8" />
+            <ContinueButton
+              href="/why-now"
+              label="WHY ARE WE DOING THIS?"
+              className="mt-8"
+            />
           </Reveal>
         </div>
       </section>

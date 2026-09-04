@@ -53,7 +53,7 @@ export function LeedsAnnouncementModal() {
       <button
         type="button"
         onClick={openModal}
-        className="inline-flex items-center justify-center rounded-full border border-[rgba(210,178,116,0.42)] bg-[linear-gradient(180deg,rgba(247,240,227,0.96),rgba(228,214,187,0.9))] px-3 py-1.5 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-[#233126] shadow-[0_10px_22px_rgba(0,0,0,0.18),0_0_0_1px_rgba(255,250,240,0.14)_inset] transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(210,178,116,0.7)] hover:bg-[linear-gradient(180deg,rgba(250,244,234,0.98),rgba(235,223,199,0.94))] hover:shadow-[0_14px_28px_rgba(0,0,0,0.22),0_0_0_1px_rgba(255,250,240,0.18)_inset] sm:px-3.5 sm:text-[0.64rem]"
+        className="mt-1 inline-flex min-h-12 w-full items-center justify-center rounded-full border border-[rgba(210,178,116,0.42)] bg-[linear-gradient(180deg,rgba(247,240,227,0.96),rgba(228,214,187,0.9))] px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#233126] shadow-[0_10px_22px_rgba(0,0,0,0.18),0_0_0_1px_rgba(255,250,240,0.14)_inset] transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(210,178,116,0.7)] hover:bg-[linear-gradient(180deg,rgba(250,244,234,0.98),rgba(235,223,199,0.94))] hover:shadow-[0_14px_28px_rgba(0,0,0,0.22),0_0_0_1px_rgba(255,250,240,0.18)_inset] sm:mt-0 sm:min-h-0 sm:w-auto sm:px-3.5 sm:py-1.5 sm:text-[0.64rem] sm:tracking-[0.22em]"
       >
         See Announcement
       </button>
@@ -61,17 +61,20 @@ export function LeedsAnnouncementModal() {
       {typeof document !== "undefined" && open
         ? createPortal(
             <div
-              className="fixed inset-0 z-[9999] flex items-center justify-center bg-[rgba(6,10,8,0.84)] px-4 py-8 backdrop-blur-md"
+              className="modal-backdrop bg-[rgba(6,10,8,0.84)] backdrop-blur-md"
               onClick={closeModal}
             >
               <div
-                className="relative z-[10000] w-full max-w-5xl"
+                role="dialog"
+                aria-modal="true"
+                aria-label="Leeds Grand Theatre announcement"
+                className="modal-surface relative max-w-5xl"
                 onClick={(event) => event.stopPropagation()}
               >
                 <button
                   type="button"
                   onClick={closeModal}
-                  className="absolute right-0 top-[-2.75rem] text-[0.82rem] font-medium uppercase tracking-[0.18em] text-[var(--color-cream)] transition hover:text-[var(--color-gold)]"
+                  className="modal-close absolute right-0 top-[-3rem] inline-flex items-center justify-center text-[0.82rem] font-medium uppercase tracking-[0.18em] text-[var(--color-cream)] transition hover:text-[var(--color-gold)]"
                 >
                   Close
                 </button>
@@ -95,7 +98,7 @@ export function LeedsAnnouncementModal() {
                     </div>
 
                     {!showFallback ? (
-                      <div className="relative min-h-[24rem] overflow-hidden rounded-[1.25rem] border border-[rgba(255,255,255,0.04)] bg-black sm:min-h-[32rem]">
+                      <div className="relative h-[min(24rem,58dvh)] overflow-hidden rounded-[1.25rem] border border-[rgba(255,255,255,0.04)] bg-black sm:h-[min(32rem,66dvh)]">
                         <div className="pointer-events-none absolute inset-0 z-10 bg-[repeating-linear-gradient(180deg,rgba(255,255,255,0.018)_0,rgba(255,255,255,0.018)_2px,transparent_2px,transparent_4px)] opacity-35" />
                         <div className="pointer-events-none absolute inset-x-0 top-0 z-20 h-20 bg-[linear-gradient(180deg,rgba(7,18,12,0.76),rgba(7,18,12,0.4),transparent)]" />
                         {!iframeLoaded ? (
@@ -122,7 +125,7 @@ export function LeedsAnnouncementModal() {
                           href={LEEDS_ANNOUNCEMENT_URL}
                           target="_blank"
                           rel="noreferrer"
-                          className="mt-6 inline-flex items-center justify-center rounded-full border border-[rgba(210,178,116,0.48)] bg-[linear-gradient(180deg,rgba(248,241,229,0.96),rgba(229,216,191,0.92))] px-6 py-3 text-center text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-[#263224] shadow-[0_14px_32px_rgba(0,0,0,0.2),0_0_0_1px_rgba(255,250,240,0.14)_inset] transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(210,178,116,0.76)] hover:bg-[linear-gradient(180deg,rgba(250,244,234,0.98),rgba(235,223,199,0.94))]"
+                          className="mobile-action mt-6 inline-flex items-center justify-center rounded-full border border-[rgba(210,178,116,0.48)] bg-[linear-gradient(180deg,rgba(248,241,229,0.96),rgba(229,216,191,0.92))] px-5 py-3 text-center text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[#263224] shadow-[0_14px_32px_rgba(0,0,0,0.2),0_0_0_1px_rgba(255,250,240,0.14)_inset] transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(210,178,116,0.76)] hover:bg-[linear-gradient(180deg,rgba(250,244,234,0.98),rgba(235,223,199,0.94))] sm:tracking-[0.24em]"
                         >
                           Open Leeds Announcement
                         </a>

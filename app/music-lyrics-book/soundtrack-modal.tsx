@@ -167,14 +167,23 @@ export function SoundtrackModal() {
       >
         <span className="pointer-events-none absolute inset-[0.5rem] rounded-full border border-[rgba(232,222,203,0.12)]" />
         <span className="pointer-events-none absolute inset-[1.2rem] rounded-full border border-[rgba(200,168,110,0.16)]" />
-        <span className="pointer-events-none absolute ml-1 h-0 w-0 border-y-[12px] border-l-[20px] border-y-transparent border-l-[var(--color-gold)] transition duration-300 group-hover:scale-105" />
+        <span className="pointer-events-none absolute ml-1.5 h-0 w-0 border-y-[18px] border-l-[29px] border-y-transparent border-l-[var(--color-gold)] transition duration-300 group-hover:scale-105" />
         <span className="sr-only">Open soundtrack samples</span>
       </button>
 
       {typeof document !== "undefined" && open
         ? createPortal(
-            <div className="fixed inset-0 z-[100] flex items-center justify-center bg-[rgba(6,10,8,0.92)] px-4 py-6 backdrop-blur-md sm:py-8">
-          <div className="relative w-full max-w-6xl">
+            <div
+              className="modal-backdrop bg-[rgba(6,10,8,0.92)] backdrop-blur-md"
+              onClick={closeModal}
+            >
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="soundtrack-modal-title"
+            className="modal-surface relative max-w-6xl"
+            onClick={(event) => event.stopPropagation()}
+          >
             <button
               type="button"
               onClick={closeModal}
@@ -185,15 +194,15 @@ export function SoundtrackModal() {
             <button
               type="button"
               onClick={closeModal}
-              className="absolute right-1 top-[-2.75rem] text-[0.82rem] font-medium uppercase tracking-[0.18em] text-[var(--color-cream)] transition hover:text-[var(--color-gold)]"
+              className="modal-close absolute right-0 top-[-3rem] inline-flex items-center justify-center text-[0.82rem] font-medium uppercase tracking-[0.18em] text-[var(--color-cream)] transition hover:text-[var(--color-gold)]"
             >
               Close
             </button>
 
-            <div className="max-h-[calc(100vh-5rem)] overflow-y-auto rounded-[2rem] border border-[rgba(232,222,203,0.14)] bg-[linear-gradient(180deg,rgba(21,29,24,0.98),rgba(11,17,13,0.98))] shadow-[0_30px_80px_rgba(0,0,0,0.5)]">
+            <div className="rounded-[1.5rem] border border-[rgba(232,222,203,0.14)] bg-[linear-gradient(180deg,rgba(21,29,24,0.98),rgba(11,17,13,0.98))] shadow-[0_30px_80px_rgba(0,0,0,0.5)] sm:rounded-[2rem]">
               <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_16%,rgba(255,233,188,0.08),transparent_20%),radial-gradient(circle_at_84%_18%,rgba(214,180,103,0.1),transparent_18%)]" />
               <div className="relative border-b border-[rgba(232,222,203,0.08)] px-5 py-4 text-center sm:px-7 sm:py-5 lg:px-8">
-                <h2 className="text-[2rem] font-bold uppercase leading-[0.95] tracking-[-0.04em] text-[var(--color-ivory)] sm:text-[2.5rem] lg:text-[3rem]">
+                <h2 id="soundtrack-modal-title" className="text-[clamp(1.65rem,9vw,2rem)] font-bold uppercase leading-[1] tracking-[-0.02em] text-[var(--color-ivory)] sm:text-[2.5rem] lg:text-[3rem]">
                   Sample of Some of the Songs
                 </h2>
                 <p className="mt-2 text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[var(--color-gold)] sm:text-[0.76rem]">
@@ -234,11 +243,11 @@ export function SoundtrackModal() {
                         >
                           {isActive ? (
                             <span className="flex gap-1">
-                              <span className="h-4 w-1.5 rounded-full bg-current" />
-                              <span className="h-4 w-1.5 rounded-full bg-current" />
+                              <span className="h-6 w-2 rounded-full bg-current" />
+                              <span className="h-6 w-2 rounded-full bg-current" />
                             </span>
                           ) : (
-                            <span className="ml-0.5 h-0 w-0 border-y-[8px] border-l-[13px] border-y-transparent border-l-current" />
+                            <span className="ml-1 h-0 w-0 border-y-[12px] border-l-[19px] border-y-transparent border-l-current" />
                           )}
                         </button>
                       </div>

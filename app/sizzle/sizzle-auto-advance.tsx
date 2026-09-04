@@ -18,10 +18,10 @@ export function SizzleAutoAdvance() {
   };
 
   return (
-    <div className="relative min-h-[calc(100svh-8rem)] overflow-hidden rounded-[2rem] border border-[rgba(232,222,203,0.08)] bg-[rgba(8,12,10,0.52)] shadow-[0_22px_60px_rgba(0,0,0,0.24)]">
+    <div className="relative flex min-h-[calc(100svh-8rem)] items-center overflow-hidden rounded-[1.5rem] border border-[rgba(232,222,203,0.08)] bg-[rgba(8,12,10,0.52)] shadow-[0_22px_60px_rgba(0,0,0,0.24)] sm:rounded-[2rem]">
       <div className="pointer-events-none absolute inset-0 z-10 bg-[linear-gradient(180deg,rgba(3,7,5,0.2),rgba(3,7,5,0.42))]" />
 
-      <div className="relative aspect-video min-h-[calc(100svh-8rem)] w-full">
+      <div className="relative aspect-video w-full">
         <video
           src="/assets/trailer.mp4"
           autoPlay
@@ -29,14 +29,14 @@ export function SizzleAutoAdvance() {
           playsInline
           controls
           onEnded={handleAdvance}
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-contain"
         />
       </div>
 
-      <div className="absolute bottom-6 right-6 z-20">
+      <div className="absolute bottom-3 right-3 z-20 sm:bottom-6 sm:right-6">
         <Link
           href="/legacy"
-          className="text-[0.82rem] font-medium uppercase tracking-[0.18em] text-[var(--color-gold)] transition duration-200 hover:opacity-80"
+          className="inline-flex min-h-12 min-w-12 items-center justify-center rounded-full bg-[rgba(7,18,12,0.72)] px-4 text-[0.82rem] font-medium uppercase tracking-[0.18em] text-[var(--color-gold)] transition duration-200 hover:opacity-80"
         >
           Skip
         </Link>

@@ -19,13 +19,13 @@ export function PageHero({
   children,
 }: PageHeroProps) {
   return (
-    <section className="section-shell grid min-h-[72svh] items-end gap-12 py-28 lg:grid-cols-[1.1fr_0.9fr] lg:py-32">
+    <section className="section-shell grid items-center gap-8 py-10 sm:gap-12 sm:py-16 lg:min-h-[72svh] lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:py-24">
       <Reveal className="relative z-10">
         <p className="eyebrow mb-5 text-[var(--color-gold)]">
           {eyebrow}
         </p>
         <div className="mb-6 h-px w-32 gold-rule" />
-        <h1 className="headline max-w-4xl text-5xl text-[var(--color-ivory)] sm:text-6xl lg:text-7xl">
+        <h1 className="headline max-w-4xl text-[clamp(2.35rem,13vw,3rem)] text-[var(--color-ivory)] sm:text-6xl lg:text-7xl">
           {title}
         </h1>
         <p className="body-copy mt-6 max-w-2xl text-[var(--color-mist)]">
@@ -41,7 +41,7 @@ export function PageHero({
             alt={imageAlt}
             width={1000}
             height={1200}
-            className="h-full min-h-[380px] w-full object-cover"
+            className="aspect-[4/3] h-auto w-full object-cover sm:aspect-[5/4] lg:min-h-[380px]"
             priority
           />
         </div>

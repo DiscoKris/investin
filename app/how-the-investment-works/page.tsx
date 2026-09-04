@@ -1,27 +1,34 @@
 import Image from "next/image";
 import { ContinueButton } from "@/components/continue-button";
 import { Reveal } from "@/components/reveal";
+import {
+  capitalRequirement,
+  formatGbp,
+  totalGrossBoxOfficePotential,
+  totalPerformanceWeeks,
+  weeklyRunningCosts,
+} from "@/lib/commercial-model";
 
 const steps = [
   {
     step: "01",
-    title: "Investment Pool",
-    body: "The production is targeting a capitalisation of approximately £1,000,000 to finance the initial 2027 UK Tour launch, production costs, marketing, rehearsals, and operating reserve.",
+    title: "Commercial Launch Capital",
+    body: `The production is raising ${formatGbp(capitalRequirement)} to finance the 2027 World Premiere, including physical production, rehearsals, launch marketing and operating reserve.`,
   },
   {
     step: "02",
-    title: "Weekly Operations",
-    body: "Weekly box office revenue is generated through ticket sales across the UK tour. Operating costs, theatre splits, VAT, and running expenses are deducted before weekly surplus is calculated.",
+    title: "World Premiere Run",
+    body: `The commercial launch comprises ${totalPerformanceWeeks} weeks: three weeks in Leeds, one week in Hull and one week in London.`,
   },
   {
     step: "03",
-    title: "Recoupment",
-    body: "Investor recoupment is projected through net operating profits generated during the UK Tour run. Theatre Tax Relief may also significantly enhance the overall recoupment position.",
+    title: "Revenue and Recoupment",
+    body: `The schedule has total gross box office potential of ${formatGbp(totalGrossBoxOfficePotential)} and weekly running costs of ${formatGbp(weeklyRunningCosts)}. Net operating surplus and Theatre Tax Relief support investor recoupment.`,
   },
   {
     step: "04",
-    title: "Future Life",
-    body: "Following the UK Tour, the production intends to pursue additional revenue opportunities including West End, Broadway, international touring, licensing, cast recordings, and subsidiary rights exploitation.",
+    title: "Historic Development Investors",
+    body: "Historical investors who financed the development concerts and development of To Sir, With Love collectively hold 175 Development Participation Units. These Units do not participate in repayment of the £750,000 new Investor Capital and receive no distributions until the new Investors have received 100% repayment. They then participate in the 60% Investor Pool alongside the 750 new Investor Participation Units, across 925 total Participation Units.",
   },
 ];
 
@@ -51,7 +58,7 @@ export default function HowTheInvestmentWorksPage() {
                     </h1>
                     <p className="mt-4 max-w-[34rem] text-[0.98rem] leading-[1.7] text-[var(--color-cream)] sm:text-[1.04rem]">
                       A simplified overview of the proposed recoupment structure
-                      for the 2027 UK Tour production.
+                      for the 2027 World Premiere production.
                     </p>
                   </div>
                 </div>
@@ -70,7 +77,7 @@ export default function HowTheInvestmentWorksPage() {
                             {item.title}
                           </h2>
                           <div className="mt-3 h-px w-full bg-[linear-gradient(90deg,rgba(200,168,110,0.6),rgba(200,168,110,0.12),transparent)]" />
-                          <p className="mt-3 text-[0.92rem] leading-[1.68] text-[var(--color-cream)] sm:text-[0.97rem]">
+                          <p className="mt-3 text-[1rem] leading-[1.7] text-[var(--color-cream)] sm:text-[1.02rem]">
                             {item.body}
                           </p>
                         </div>

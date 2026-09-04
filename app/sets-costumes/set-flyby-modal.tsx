@@ -1,9 +1,27 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 
 export function SetFlybyModal() {
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (!open) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") setOpen(false);
+    }
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [open]);
 
   return (
     <>
@@ -18,13 +36,23 @@ export function SetFlybyModal() {
         <span className="sr-only">Play set fly by</span>
       </button>
 
-      {open ? (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-[rgba(6,10,8,0.8)] px-4 py-8 backdrop-blur-sm">
-          <div className="relative w-full max-w-4xl">
+      {typeof document !== "undefined" && open
+        ? createPortal(
+        <div
+          className="modal-backdrop bg-[rgba(6,10,8,0.8)] backdrop-blur-sm"
+          onClick={() => setOpen(false)}
+        >
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-label="Set flyby video"
+            className="modal-surface relative max-w-4xl"
+            onClick={(event) => event.stopPropagation()}
+          >
             <button
               type="button"
               onClick={() => setOpen(false)}
-              className="absolute right-0 top-[-2.75rem] text-[0.82rem] font-medium uppercase tracking-[0.18em] text-[var(--color-cream)]"
+              className="modal-close absolute right-0 top-[-3rem] inline-flex items-center justify-center text-[0.82rem] font-medium uppercase tracking-[0.18em] text-[var(--color-cream)]"
             >
               Close
             </button>
@@ -48,8 +76,10 @@ export function SetFlybyModal() {
               </div>
             </div>
           </div>
-        </div>
-      ) : null}
+        </div>,
+        document.body,
+      )
+        : null}
     </>
   );
 }

@@ -6,7 +6,7 @@ export default function OpportunityPage() {
   return (
     <section className="section-shell py-6 sm:py-8 lg:py-10">
       <div className="relative mx-auto flex min-h-[calc(100svh-8rem)] max-w-[92rem] items-center">
-        <div className="grid w-full gap-6 lg:min-h-[calc(100svh-10rem)] lg:grid-cols-[1.16fr_0.84fr] lg:items-stretch">
+        <div className="grid w-full gap-8 lg:min-h-[calc(100svh-10rem)] lg:grid-cols-[1.16fr_0.84fr] lg:items-stretch lg:gap-10">
           <Reveal className="relative overflow-hidden rounded-[2rem] border border-[rgba(232,222,203,0.08)] bg-[rgba(34,56,35,0.44)] px-6 py-7 shadow-[0_18px_50px_rgba(0,0,0,0.16)] sm:px-8 sm:py-8 lg:rounded-[2.4rem] lg:px-10 lg:py-8">
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_12%_16%,rgba(255,233,188,0.08),transparent_24%),linear-gradient(180deg,rgba(255,250,239,0.03),rgba(8,13,10,0.08))]" />
 
@@ -28,27 +28,47 @@ export default function OpportunityPage() {
               <div className="mt-7 max-w-[45rem] space-y-7 text-[0.98rem] leading-[1.64] text-[var(--color-cream)] sm:text-[1.04rem] lg:mt-8">
                 <div className="space-y-3">
                   <p className="font-semibold uppercase tracking-[0.08em] text-[var(--color-ivory)]">
-                    Pre-Recoupment
+                    Commercial Launch
                   </p>
                   <p>
-                    Prior to recoupment, 100% of the net surplus of the
-                    Production available for distribution shall be applied to
-                    the repayment of Physical Production Capital. Such
-                    repayments shall be distributed pari passu to Investors in
-                    proportion to their respective subscriptions. The Production
-                    shall be deemed to have recouped once Physical Production
-                    Capital has been repaid in full.
+                    A five-week World Premiere in Leeds, Hull and London launches
+                    the theatrical property and creates the commercial
+                    foundation for potential future productions.
                   </p>
                 </div>
 
                 <div className="space-y-3">
                   <p className="font-semibold uppercase tracking-[0.08em] text-[var(--color-ivory)]">
-                    Post-Recoupment
+                    1. Production Expenses &amp; Reserves
                   </p>
                   <p>
-                    Following full repayment of Physical Production Capital, all
-                    further distributable receipts shall constitute Net Profits.
-                    Net Profits shall be allocated as follows:
+                    Production revenues are first applied to Production
+                    Expenses, Operating Expenses and approved reserves.
+                  </p>
+                </div>
+
+                <div className="space-y-3">
+                  <p className="font-semibold uppercase tracking-[0.08em] text-[var(--color-ivory)]">
+                    2. Recoupment of New Investor Capital
+                  </p>
+                  <p>
+                    Remaining Net Profits are distributed pro rata among
+                    holders of the new Investor Participation Units until the
+                    accepted new Investor Capital has been returned. The 175
+                    Historic Development Participation Units held by the
+                    historical investors who financed the development concerts
+                    and development of the production do not participate in
+                    this recoupment tier and receive no distributions until the
+                    new Investors have received 100% repayment.
+                  </p>
+                </div>
+
+                <div className="space-y-3">
+                  <p className="font-semibold uppercase tracking-[0.08em] text-[var(--color-ivory)]">
+                    3. Post-Recoupment Profits
+                  </p>
+                  <p>
+                    Thereafter, distributable Net Profits shall be allocated:
                   </p>
                   <div className="space-y-2 pl-1">
                     <p className="flex gap-3">
@@ -56,29 +76,17 @@ export default function OpportunityPage() {
                         •
                       </span>
                       <span>
-                        60% to Investors, distributed pro rata in accordance
-                        with their fractional investment.
+                        60% to the Investors&apos; Profit Pool, distributed pro rata
+                        across all Investor Participation Units then outstanding.
                       </span>
                     </p>
                     <p className="flex gap-3">
                       <span className="pt-[0.18rem] text-[var(--color-gold)]">
                         •
                       </span>
-                      <span>40% to the Producers.</span>
+                      <span>40% to the Producer Participation Pool.</span>
                     </p>
                   </div>
-                </div>
-
-                <div className="space-y-3">
-                  <p className="font-semibold uppercase tracking-[0.08em] text-[var(--color-ivory)]">
-                    Example
-                  </p>
-                  <p>
-                    By way of illustration only, if the Lead Producers&apos;
-                    share of Net Profits totals £100,000 in net profit, the
-                    investor group (collectively) will receive 60% or £60,000,
-                    distributed pro-rata to each investor&apos;s contribution.
-                  </p>
                 </div>
 
                 <div className="space-y-3">
@@ -91,22 +99,24 @@ export default function OpportunityPage() {
                     <span className="font-semibold text-[var(--color-gold)]">
                       Greenslade Productions Ltd.
                     </span>{" "}
-                    Standard production terms for recoupment, repayment, and
-                    ongoing profit participation apply, as detailed in the
-                    financial terms below. A full participation agreement will
-                    outline distribution procedures, reporting schedules, and
-                    investor communications.
+                    The Subscription Agreement and applicable investment
+                    documents govern recoupment, reporting and investor
+                    communications.
                   </p>
                 </div>
               </div>
 
-              <ContinueButton href="/recoupment-chart" className="lg:mt-8" />
+              <ContinueButton
+                href="/recoupment-chart"
+                label="SCAN THE NUMBERS"
+                className="lg:mt-8"
+              />
             </div>
           </Reveal>
 
           <Reveal
             delay={0.08}
-            className="relative flex min-h-[22rem] items-stretch justify-center lg:min-h-0 lg:justify-end"
+            className="relative flex min-h-[22rem] items-stretch justify-center lg:min-h-0 lg:justify-end lg:pl-6 xl:pl-10"
           >
             <div className="card-panel relative w-full overflow-hidden rounded-[2rem] p-4 lg:rounded-[2.4rem]">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_14%,rgba(255,233,188,0.08),transparent_24%),linear-gradient(180deg,rgba(255,255,255,0.02),rgba(0,0,0,0.08))]" />

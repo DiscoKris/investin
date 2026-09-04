@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="595" height="841" viewBox="0 0 595 841" role="img" aria-labelledby="title desc">
+  <title id="title">Example To Sir, With Love investor statement</title>
+  <desc id="desc">Illustrative investor statement using the updated capitalization, weekly running cost, theatre potential and Hull terms.</desc>
+  <rect width="595" height="841" fill="#fffefa"/>
+  <style>
+    text { font-family: Arial, Helvetica, sans-serif; fill: #4f5e55; }
+    .gold { fill: #a57f45; font-weight: 700; }
+    .green { fill: #183829; font-weight: 700; }
+    .small { font-size: 8px; }
+    .tiny { font-size: 6px; }
+    .body { font-size: 9px; }
+    .value { font-size: 9px; fill: #183829; font-weight: 700; }
+  </style>
+  <text x="45" y="50" class="gold small">TO SIR, WITH LOVE THE MUSICAL</text>
+  <text x="45" y="79" class="green" font-size="24">Investor statement</text>
+  <line x1="45" y1="112" x2="550" y2="112" stroke="#244532" stroke-width="1.5"/>
+
+  <text x="45" y="140" class="green" font-size="11">John Smith</text>
+  <text x="45" y="157" class="body">123 High Street</text>
+  <text x="45" y="171" class="body">London</text>
+  <text x="45" y="185" class="body">Greater London</text>
+  <text x="45" y="199" class="body">SW1A 1AA</text>
+  <text x="45" y="213" class="body">United Kingdom</text>
+  <text x="45" y="227" class="body">investor-test@example.com</text>
+  <text x="350" y="140" class="value">Statement date: 07/08/2026</text>
+  <text x="350" y="157" class="body">Account: TSWL-2027-••0004</text>
+
+  <text x="45" y="257" class="gold small">EXECUTIVE UPDATE</text>
+  <text x="45" y="276" class="body">We are excited to share that we are currently casting.</text>
+
+  <text x="45" y="321" class="gold small">PRODUCTION SUMMARY</text>
+  <text x="45" y="343" class="green" font-size="10">Total capitalization: £750,000</text>
+  <text x="300" y="343" class="green" font-size="10">Operational cost per week (6): £105,000</text>
+
+  <text x="45" y="380" class="gold small">THEATRE BOX OFFICE</text>
+  <text x="45" y="400" class="tiny" font-weight="700">THEATRE</text>
+  <text x="155" y="400" class="tiny" text-anchor="end" font-weight="700">PERFORMANCES</text>
+  <text x="250" y="400" class="tiny" text-anchor="end" font-weight="700">CURRENT GROSS</text>
+  <text x="340" y="400" class="tiny" text-anchor="end" font-weight="700">CURRENT NET</text>
+  <text x="430" y="400" class="tiny" text-anchor="end" font-weight="700">WEEKLY CHANGE</text>
+  <text x="550" y="400" class="tiny" text-anchor="end" font-weight="700">GOAL</text>
+
+  <text x="45" y="420" class="value">LEEDS</text><text x="155" y="420" class="body" text-anchor="end">20</text><text x="250" y="420" class="value" text-anchor="end">£1,100,000</text><text x="340" y="420" class="value" text-anchor="end">£476,900</text><text x="430" y="420" class="body" text-anchor="end">+£122,000</text><text x="550" y="420" class="body" text-anchor="end">£1,460,000</text>
+  <text x="45" y="441" class="value">HULL</text><text x="155" y="441" class="body" text-anchor="end">8</text><text x="250" y="441" class="value" text-anchor="end">£385,000</text><text x="340" y="441" class="value" text-anchor="end">£117,203</text><text x="430" y="441" class="body" text-anchor="end">+£60,000</text><text x="550" y="441" class="body" text-anchor="end">£260,000</text>
+  <text x="45" y="462" class="value">LONDON</text><text x="155" y="462" class="body" text-anchor="end">14</text><text x="250" y="462" class="value" text-anchor="end">£680,000</text><text x="340" y="462" class="value" text-anchor="end">£286,720</text><text x="430" y="462" class="body" text-anchor="end">+£120,000</text><text x="550" y="462" class="body" text-anchor="end">£550,000</text>
+  <line x1="45" y1="473" x2="550" y2="473" stroke="#d6d0c4" stroke-width="0.5"/>
+  <text x="45" y="493" class="green small">TOTAL</text><text x="155" y="493" class="value" text-anchor="end">42</text><text x="250" y="493" class="value" text-anchor="end">£2,165,000</text><text x="340" y="493" class="value" text-anchor="end">£880,823</text><text x="430" y="493" class="value" text-anchor="end">+£302,000</text><text x="550" y="493" class="value" text-anchor="end">£2,270,000</text>
+  <text x="45" y="530" class="gold small">THEATRE TERMS</text>
+  <text x="45" y="550" class="body">Leeds: £315,000 three-week operating cost</text>
+  <text x="45" y="566" class="body">Hull: 85% producer / 15% venue</text>
+  <text x="300" y="550" class="body">London: 100% producer box office</text>
+  <text x="300" y="566" class="body">London: rental included in £105,000 all-in</text>
+
+  <text x="45" y="611" class="gold small">INVESTOR SUMMARY</text>
+  <text x="45" y="632" class="tiny" font-weight="700">SYMBOL</text><text x="110" y="632" class="tiny" text-anchor="end" font-weight="700">UNITS</text><text x="205" y="632" class="tiny" text-anchor="end" font-weight="700">ORIGINAL INVESTMENT</text><text x="355" y="632" class="tiny" text-anchor="end" font-weight="700">TODAY'S PRICE</text><text x="460" y="632" class="tiny" text-anchor="end" font-weight="700">CURRENT VALUATION</text><text x="550" y="632" class="tiny" text-anchor="end" font-weight="700">TOTAL GAIN</text>
+  <text x="45" y="653" class="value">TSWL</text><text x="110" y="653" class="body" text-anchor="end">20</text><text x="205" y="653" class="body" text-anchor="end">£20,000</text><text x="355" y="653" class="value" text-anchor="end">£1,221</text><text x="460" y="653" class="value" text-anchor="end">£24,420</text><text x="550" y="653" class="value" text-anchor="end">+£4,420</text>
+  <rect x="45" y="674" width="505" height="54" fill="#183829"/>
+  <text x="58" y="692" fill="#c2d1c8" class="tiny" font-weight="700">CURRENT STATEMENT VALUE</text>
+  <text x="58" y="715" fill="#ffffff" font-size="16" font-weight="700">£24,420</text>
+  <text x="45" y="765" class="gold small">VALUATION BASIS</text>
+  <text x="45" y="784" class="body">Calculated from TSWL Units held multiplied by the current TSWL Unit price.</text>
+  <text x="45" y="816" class="tiny">Illustrative statement only. Financial projections are not guarantees of performance.</text>
+</svg>

@@ -29,7 +29,7 @@ export default function StoryPage() {
             aims to prepare them for more than just exams; he prepares them for
             life.
           </p>
-          <ContinueButton href="/sizzle" />
+          <ContinueButton href="/sizzle" label="WATCH THIS" />
         </div>
 
         <div className="relative flex items-center justify-center">
@@ -37,8 +37,8 @@ export default function StoryPage() {
           <div className="absolute right-10 top-14 hidden h-3 w-28 rotate-[18deg] rounded-full bg-[rgba(200,168,110,0.22)] blur-sm lg:block" />
           <div className="absolute -left-2 top-20 hidden h-24 w-24 rounded-full bg-[rgba(255,233,188,0.08)] blur-2xl lg:block" />
 
-          <div className="relative w-full max-w-[34rem] rotate-[-3deg]">
-            <div className="absolute -right-3 top-5 h-14 w-14 rotate-[18deg] rounded-sm border border-[rgba(232,222,203,0.16)] bg-[rgba(232,222,203,0.1)] shadow-[0_8px_24px_rgba(0,0,0,0.12)]" />
+          <div className="relative w-full max-w-[34rem] sm:rotate-[-3deg]">
+            <div className="absolute right-0 top-5 hidden h-14 w-14 rotate-[18deg] rounded-sm border border-[rgba(232,222,203,0.16)] bg-[rgba(232,222,203,0.1)] shadow-[0_8px_24px_rgba(0,0,0,0.12)] sm:block sm:-right-3" />
             <div className="absolute left-8 top-[-1rem] h-8 w-24 rotate-[-8deg] rounded-sm bg-[rgba(217,188,134,0.4)] shadow-[0_10px_22px_rgba(0,0,0,0.16)]" />
             <div className="absolute -bottom-5 left-4 h-12 w-28 rotate-[6deg] rounded-sm bg-[rgba(217,188,134,0.18)] blur-md" />
 

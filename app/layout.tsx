@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s | To Sir, With Love The Musical",
   },
   description:
-    "Investor presentation website for To Sir, With Love The Musical and the planned 2027 UK Tour.",
+    "Investor presentation for the contained five-week 2027 commercial launch of To Sir, With Love The Musical, a new theatrical property.",
 };
 
 export default function RootLayout({

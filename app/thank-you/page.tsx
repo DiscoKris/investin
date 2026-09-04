@@ -17,8 +17,8 @@ export default function ThankYouPage() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_76%_32%,rgba(214,180,103,0.16),transparent_24%),linear-gradient(180deg,rgba(5,10,7,0.28),rgba(5,10,7,0.44))]" />
 
       <div className="section-shell relative z-10 flex min-h-[calc(100svh-5.5rem)] items-center py-8 sm:py-10 lg:py-12">
-        <div className="grid w-full gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(22rem,0.95fr)] lg:items-end lg:gap-10">
-          <div className="justify-self-end rounded-[2rem] border border-[rgba(232,222,203,0.14)] bg-[rgba(10,17,12,0.42)] p-6 shadow-[0_22px_60px_rgba(0,0,0,0.24)] backdrop-blur-[10px] sm:p-8 lg:max-w-[34rem] lg:p-10">
+        <div className="grid min-w-0 w-full gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(22rem,0.95fr)] lg:items-end lg:gap-10">
+          <div className="min-w-0 max-w-full justify-self-end rounded-[1.6rem] border border-[rgba(232,222,203,0.14)] bg-[rgba(10,17,12,0.42)] p-5 shadow-[0_22px_60px_rgba(0,0,0,0.24)] backdrop-blur-[10px] sm:rounded-[2rem] sm:p-8 lg:max-w-[34rem] lg:p-10">
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-[var(--color-gold)]">
               Investor Presentation
             </p>
@@ -33,15 +33,15 @@ export default function ThankYouPage() {
               <p>
                 <a
                   href="mailto:dearsir@tosirwithlovemusical.com"
-                  className="border-b border-[rgba(214,180,103,0.45)] text-[var(--color-ivory)] transition hover:border-[rgba(214,180,103,0.85)] hover:text-[var(--color-gold)]"
+                  className="[overflow-wrap:anywhere] border-b border-[rgba(214,180,103,0.45)] text-[var(--color-ivory)] transition hover:border-[rgba(214,180,103,0.85)] hover:text-[var(--color-gold)]"
                 >
-                  dearsir@tosirwithlovemusical.com
+                  dearsir<wbr />@tosirwithlovemusical.com
                 </a>
               </p>
             </div>
           </div>
 
-          <div className="w-full lg:max-w-[33rem] lg:justify-self-end">
+          <div className="min-w-0 w-full lg:max-w-[33rem] lg:justify-self-end">
             <div className="rounded-[2rem] border border-[rgba(232,222,203,0.16)] bg-[rgba(9,16,11,0.68)] p-2 shadow-[0_24px_64px_rgba(0,0,0,0.28)] backdrop-blur-[14px]">
               <ContactForm />
             </div>
